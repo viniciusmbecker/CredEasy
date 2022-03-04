@@ -1,0 +1,24 @@
+header {
+    border: 1px solid red;
+    background: #BBBBBB;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+.caixa-cabecalho {
+    border: 1px solid green;
+    position: relative;
+}
+
+main {
+    border: 1px solid blue;
+}
+
+.copyright {
+    background-color: aquamarine;
+    font-size: 13px;
+}
