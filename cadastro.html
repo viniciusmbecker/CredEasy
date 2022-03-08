@@ -8,78 +8,85 @@
         <title>Cadastre-se</title>
     </head>
     <body>
-        
-        <!-- Início do formulário -->
-        <form>
-            <fieldset class="grupo">
+
+         <!-- Início do cabeçalho-->
+         <header>
+            <div>
+                <h1>
+                    CredEasy
+                </h1>    
+            </div>
+
+        </header>
+        <!-- Final do cabeçalho-->
+
+        <main>
+
+            
+            <!-- Início do formulário -->
+            <form>
+                <h2>Crie a sua conta</h2>
                 <!-- Início do campo do nome -->
-                <div class="campos">
-                    <label for="nome">Nome</label>
-                    <input type="text" name="nome" id="nome" required>
+                <div class="left">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" minlength="10" maxlength="225" name="nome" id="nome" required>
                 </div>
                 <!-- Final do campo do nome -->
 
-                <!-- Início do campo do sobrenome -->
-                <div class="campos">
-                    <label for="sobrenome">Sobrenome</label>
-                    <input type="text" name="sobrenome" id="sobrenome" required>
+                <!-- Início do campo CPF -->
+                <div class="rigth">
+                    <label for="cpf">CPF</label>
+                    <input type="text" name="cpf" minlength="11" maxlength="11" id="cpf" placeholder="xxx.xxx.xxx-xx" required>
                 </div>
-                <!-- Final do campo do sobrenome-->
-            </fieldset>
+                <!-- Final do campo CPF -->
 
-            <!-- Início do campo CPF -->
-            <div class="campos">
-                <label for="cpf">CPF</label>
-                <input type="number" name="cpf" id="cpf" placeholder="xxx.xxx.xxx-xx" required>
-            </div>
-            <!-- Final do campo CPF -->
+                <!-- Inçio do campo Telefone -->
+                <div>
+                    <label for="phone">Telefone</label>
+                    <input type="tel" name="phone" id="phone" placeholder="xx-xxxxx-xxxx" required>
+                </div>
+                <!-- Final do campo Telefone -->
 
-            <!-- Inçio do campo Telefone -->
-            <div class="campos">
-                <label for="phone">Telefone</label>
-                <input type="tel" name="phone" id="phone" placeholder="xx-xxxxx-xxxx" required>
-            </div>
-            <!-- Final do campo Telefone -->
+                <!-- Início do campo Endereço -->
+                <div>
+                    <label for="endereco">Endereço</label>
+                    <input type="text" name="endereco" id="endereco" required>
+                </div>
+                <!-- Final do campo Endereço -->
 
-            <!-- Início do campo Endereço -->
-            <div class="campos">
-                <label for="endereco">Endereço</label>
-                <input type="text" name="endereco" id="endereco" required>
-            </div>
-            <!-- Final do campo Endereço -->
+                <!-- Início do campo Profissão -->
+                <div>
+                    <label for="profissao">Profissão</label>
+                    <input type="text" name="profisssao" id="profissao" required>
+                </div>
+                <!-- Final do campo Profissão -->
 
-            <!-- Início do campo Profissão -->
-            <div class="campos">
-                <label for="profissao">Profissão</label>
-                <input type="text" name="profisssao" id="profissao" required>
-            </div>
-            <!-- Final do campo Profissão -->
+                <!-- Início do campo Renda -->
+                <div>
+                    <label for="renda">Renda</label>
+                    <input type="number" name="renda" id="renda" required>
+                </div>
+                <!-- Final do campo Renda -->
 
-            <!-- Início do campo Renda -->
-            <div class="campos">
-                <label for="renda">Renda</label>
-                <input type="number" name="renda" id="renda" required>
-            </div>
-            <!-- Final do campo Renda -->
+                <!-- Início do campo Email -->
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <!-- Final do campo Email -->
 
-            <!-- Início do campo Email -->
-            <div class="campos">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" required>
-            </div>
-            <!-- Final do campo Email -->
+                <!-- Início do campo Senha -->
+                <div>
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" id="senha" required>
+                </div>
+                <!-- Final do campo senha -->
 
-            <!-- Início do campo Senha -->
-            <div class="campos">
-                <label for="senha">Senha</label>
-                <input type="text" name="senha" id="senha" required>
-            </div>
-            <!-- Final do campo senha -->
+                <!-- Botão para enviar o formulário -->
+                <input type="submit" value="Cadastar" id="button">
 
-            <!-- Botão para enviar o formulário -->
-            <button class="botao" type="submit" onsubmit="">Enviar Cadastro</button>
-
-        </form>
-        <!-- Final do formulário -->
+            </form>
+            <!-- Final do formulário -->
+    </main>
     </body>
 </html>

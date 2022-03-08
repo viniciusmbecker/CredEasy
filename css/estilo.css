@@ -1,23 +1,28 @@
+/* Importa a fonte */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 
+/* Reseta todos os elementos da página */
 * {
     margin: 0;
     padding: 0;
     border: 0;
+    box-sizing: border-box;    
     font-family: "Poppins", sans-serif;
 }
 
+/* Elemento body */
 body {
     max-width: 1200px;
-    background: linear-gradient(45deg, #8e2de2, #4a00e0);
+    background: linear-gradient(45deg, #097941, #020024);
     background-repeat: no-repeat;
     margin: 0 auto;
     padding: 15px;
     color: white;
 }
 
+/* Elemento header */
 header {
-    border: 1px solid red;
+/*    border: 1px solid red;*/
     padding: 20px 0;
     display: flex;
     flex-direction: row;
@@ -25,52 +30,64 @@ header {
     align-items: center;
 }
 
-#title{
+header h1 {
+    font-size: 40px;
+    font-weight: bold;
     flex-direction: column;
     line-height: 10px;
 }
 
 li{
     display: inline-block;
-    margin: 20px;
+    margin: 10px;
 }
 
 a{
-    color: white;
+    color: #ccc;
+    text-decoration: none;
 }
 
 a:hover{
-    color: rgb(132, 14, 201);
+    text-decoration: underline;
+    color: rgb(115, 111, 117);
     transition: 0.3s all;
 }
 
 #botao-login {
-    border: 2px solid rgb(132, 14, 201);
-    padding: 10px;
-    border-radius: 15px;
+    border: 2px solid rgb(5, 104, 21);
+    padding: 5px;
+    border-radius: 10px;
 }
 
 #botao-cadastrar {
-    border: 2px solid rgb(132, 14, 201);
-    padding: 10px;
-    border-radius: 15px;
-}
-
-header h1 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bold;
-}
-
-.caixa-cabecalho {
-    border: 1px solid green;
-    position: relative;
+    border: 2px solid rgb(5, 104, 21);
+    padding: 5px;
+    border-radius: 10px;
 }
 
 main {
-    border: 1px solid blue;
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
 }
 
+aside {
+    border: 1px solid violet;
+    margin: auto;
+}
+
+main aside p {
+    font-size: 40px;
+    font-weight: 600;
+    align-items: center;
+}
+
+article {
+    border: 1px solid black;
+    margin: auto;
+}
 .copyright {
-    background-color: aquamarine;
-    font-size: 13px;
+    margin-top: 20px;
+    color: #ccc;
+    font-size: 16px;
 }

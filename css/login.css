@@ -31,7 +31,8 @@ header h1{
 }
 
 main {
-    border: 2px solid yellow;
+    position: relative;
+    border: 1px solid red;
     margin-top: 110px;
     height: 45vw;
     width: 100vw;
@@ -43,6 +44,7 @@ main {
 
 main h2 {
     color: #fff;
+    font-size: 3rem;
     margin-bottom: 3rem;
     text-align: center;
 }
@@ -59,11 +61,10 @@ main form label {
 }
 
 main form input {
-    background: #161923;
+    background: #020024;
     width: 300px;
     height: 45px;
     padding: 0 0.5rem;
-/*    margin-top: 0.5rem; */
     outline: none;
     color: rgba(166, 166, 166);
     font-size: 1rem;
@@ -74,7 +75,7 @@ main form input {
 main form input[type="submit"] {
     cursor: pointer;
     width: 50%;
-    margin-top: 10px;
+    margin-top: 4rem;
     border: none;
     border-radius: 32px;
     background: rgb(115, 111, 117);
@@ -85,5 +86,25 @@ main form input[type="submit"] {
 
 main form input[type="submit"]:hover {
     background: #020024;
+    transition: all .3s ease-in-out;
 }
+
+#finalera {
+    margin-top: 40px;
+}
+
+#finalera p {
+    padding: 10px;
+}
+
+#finalera p a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#finalera p a:hover {
+    color: #020024;
+    transition: all .3s ease-in-out;
+}
+
 
