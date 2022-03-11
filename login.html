@@ -5,11 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/login.css">
-        <title>Entrar</title>
+        <title>Página de Login</title>
     </head>
     <body>
-
+    
         <!-- Início do cabeçalho-->
+        <!-- 
         <header>
             <div>
                 <h1>
@@ -18,38 +19,51 @@
             </div>
 
         </header>
+        -->
+        
         <!-- Final do cabeçalho-->
-
-        <main>
+    
+        
+        <!-- Início do principal-->
+        <main class="container">
             <h2>Entre na sua conta</h2>
 
         <!-- Início do formulário -->
-        <form>
+        <form action="#">
             <!-- Início do campo Email -->
-            <div class="campos">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" required>
+            <div class="input-field">
+                <input type="email" name="email" id="email" placeholder="Email" required>
+                <div class="underline"></div>
             </div>
             <!-- Final do campo Email -->
 
             <!-- Início do campo Senha -->
-            <div class="campos">
-                <label for="senha">Senha</label>
-                <input type="text" name="senha" id="senha" required>
+            <div class="input-field">
+                <input type="password" name="senha" id="senha" placeholder="Senha" required>
+                <div class="underline"></div>
             </div>
             <!-- Final do campo senha -->
 
             <!-- Botão para enviar o formulário -->
-            <input type="submit" value="Cadastar" id="button">
+            <input type="submit" value="Entrar">
 
         </form>
         <!-- Final do formulário -->
 
-        <div id="finalera">
-            <p> <a href="#">Esqueci minha senha > </a></p>
-            <p> <a href="cadastro.html">Ainda não sou cliente > </a></p>
+        <!-- Início dos botoẽs -->
+        <div class="footer">
+            <div class="other-buttons">
+                <div class="other-buttons-forgot">
+                    <a href="#">Esqueci minha senha > </a>
+                </div>
+                <div class="other-buttons-signup">
+                    <a href="cadastro.html">Ainda não sou cliente > </a>
+                </div>
+            </div>
         </div>
+        <!-- Final dos botoẽs -->
 
         </main>
+        <!-- Final do principal -->
     </body>
 </html>

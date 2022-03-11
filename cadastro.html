@@ -5,11 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/cadastro.css">
-        <title>Cadastre-se</title>
+        <title>Formulário de Cadastro</title>
     </head>
     <body>
 
          <!-- Início do cabeçalho-->
+         <!--
          <header>
             <div>
                 <h1>
@@ -18,75 +19,83 @@
             </div>
 
         </header>
+        -->
         <!-- Final do cabeçalho-->
 
         <main>
-
             
-            <!-- Início do formulário -->
-            <form>
-                <h2>Crie a sua conta</h2>
-                <!-- Início do campo do nome -->
-                <div class="left">
-                    <label for="nome">Nome Completo</label>
-                    <input type="text" minlength="10" maxlength="225" name="nome" id="nome" required>
-                </div>
-                <!-- Final do campo do nome -->
+            <div class="container">   
 
-                <!-- Início do campo CPF -->
-                <div class="rigth">
-                    <label for="cpf">CPF</label>
-                    <input type="text" name="cpf" minlength="11" maxlength="11" id="cpf" placeholder="xxx.xxx.xxx-xx" required>
-                </div>
-                <!-- Final do campo CPF -->
+                <div class="titulo">Cadastre sua conta</div>
 
-                <!-- Inçio do campo Telefone -->
-                <div>
-                    <label for="phone">Telefone</label>
-                    <input type="tel" name="phone" id="phone" placeholder="xx-xxxxx-xxxx" required>
-                </div>
-                <!-- Final do campo Telefone -->
+                <!-- Início do formulário -->
+                <form action="#">
+                    <div class="user-details">
 
-                <!-- Início do campo Endereço -->
-                <div>
-                    <label for="endereco">Endereço</label>
-                    <input type="text" name="endereco" id="endereco" required>
-                </div>
-                <!-- Final do campo Endereço -->
+                        <!-- Início do campo Nome -->
+                        <div class="input-field">
+                            <input type="text" minlength="10" maxlength="225" name="nome" id="nome" placeholder="Nome Completo" required>
+                            <div class="underline"></div>
+                        </div>
+                        <!-- Final do campo do nome -->
 
-                <!-- Início do campo Profissão -->
-                <div>
-                    <label for="profissao">Profissão</label>
-                    <input type="text" name="profisssao" id="profissao" required>
-                </div>
-                <!-- Final do campo Profissão -->
+                        <!-- Início do campo CPF -->
+                        <div class="input-field">
+                            <input type="text" name="cpf" minlength="11" maxlength="11" id="cpf" placeholder="CPF (XXX.XXX.XXX-XX)" required>
+                            <div class="underline"></div>
+                        </div>
+                        <!-- Final do campo CPF -->
 
-                <!-- Início do campo Renda -->
-                <div>
-                    <label for="renda">Renda</label>
-                    <input type="number" name="renda" id="renda" required>
-                </div>
-                <!-- Final do campo Renda -->
+                        <!-- Início do campo Telefone -->
+                        <div class="input-field">
+                            <input type="tel" name="phone" id="phone" placeholder="Telefone Celular (XX-XXXXXXXXX)" required>
+                            <div class="underline"></div>
+                        </div>
+                        <!-- Final do campo Telefone -->
 
-                <!-- Início do campo Email -->
-                <div>
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" required>
-                </div>
-                <!-- Final do campo Email -->
+                        <!-- Início do campo Endereço -->
+                        <div class="input-field">
+                            <input type="text" name="endereco" id="endereco" placeholder="Endereço" required>
+                            <div class="underline"></div>
+                        </div>
+                        <!-- Final do campo Endereço -->
 
-                <!-- Início do campo Senha -->
-                <div>
-                    <label for="senha">Senha</label>
-                    <input type="password" name="senha" id="senha" required>
-                </div>
-                <!-- Final do campo senha -->
+                        <!-- Início do campo Profissão -->
+                        <div class="input-field">
+                            <input type="text" name="profisssao" id="profissao" placeholder="Profissão" required>
+                            <div class="underline"></div>
+                        </div>
+                        <!-- Final do campo Profissão -->
 
-                <!-- Botão para enviar o formulário -->
-                <input type="submit" value="Cadastar" id="button">
+                        <!-- Início do campo Renda -->
+                        <div class="input-field">
+                            <input type="number" name="renda" id="renda" placeholder="Renda R$" required>
+                            <div class="underline"></div>
+                        </div>
+                        <!-- Final do campo Renda -->
 
-            </form>
+                        <!-- Início do campo Email -->
+                        <div class="input-field">
+                            <input type="email" name="email" id="email" placeholder="Email" required>
+                            <div class="underline"></div>
+                        </div>
+                        <!-- Final do campo Email -->
+
+                        <!-- Início do campo Senha -->
+                        <div class="input-field">
+                            <input type="password" name="senha" id="senha" placeholder="Senha" required>
+                            <div class="underline"></div>
+                        </div>
+                        <!-- Final do campo senha -->
+
+                        <!-- Botão para enviar o formulário -->
+                        <input type="submit" value="Cadastar">
+                    </div>
+
+                </form>
             <!-- Final do formulário -->
+            
+            </div>
     </main>
     </body>
 </html>

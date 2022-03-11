@@ -1,5 +1,7 @@
+/* Importando a fonte Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 
+/* Resetando os elementos da página */
 * {
     margin: 0;
     padding: 0;
@@ -8,38 +10,126 @@
     font-family: "Poppins", sans-serif;
 }
 
+/* Trabalhando a página */
 body {
     background: linear-gradient(45deg, #097941, #020024);
     background-repeat: no-repeat;
-    display: flex;
-    font-weight: 500;
-    color: #ccc;
     min-height: 100vh;
     min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-header {
+/* Trabalhando a caixa branca que engloba os elementos de login */
+main.container {
+    background: #fff;
+    max-width: 350px;
+    min-height: 40vh;
+    padding: 2rem;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+    border-radius: 8px;
+}
+
+/* Trabalhando os elementos de fonte */
+main h2 {
+    font-weight: 600;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+main h2::before {
+    content: '';
     position: absolute;
+    height: 4px;
+    width: 227px;
+    bottom: 3px;
+    left: 0;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #097941, #020024);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field {
+    position: relative;
+}
+
+form .input-field:first-child {
+    margin-bottom: 1.5rem;
+}
+
+.input-field .underline::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0,0,0,0.2);
+}
+
+.input-field .underline::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(45deg, #097941, #020024);
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+    transform-origin: left;
+}
+
+.input-field input:focus ~.underline::after {
+    transform: scaleX(1);
+}
+
+.input-field input {
+    outline: none;
+    font-size: 0.9rem;
+    color: rgba(0,0,0,0.7);
+}
+
+.input-field input::placeholder {
+    color: rgba(0,0,0,0.5);
+}
+
+form input[type="submit"] {
+    margin-top: 2rem;
+    padding: 0.4rem;
+    background: linear-gradient(to left, #097941, #020024);
+    cursor: pointer;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 300;
+    border-radius: 4px;
+    transition: all 0.5s ease-in-out;
+}
+
+main form input[type="submit"]:hover {
+    letter-spacing: 0.5px;
+    background: linear-gradient(to right, #097941, #020024);
+}
+
+/*/header {
     border: 1px solid blue;
+    position: absolute;
     height: 7vw;
     padding: 20px;
-}
+}*/
 
-header h1{
+/*header h1{
     font-size: 40px;
     font-weight: bold;
     text-decoration: underline;
-}
+}*/
 
-a {
-    color: #ccc;
-}
-
-a:hover {
-    color: #020024;
-}
-
-main {
+/*main {
     position: relative;
     border: 1px solid red;
     margin-top: 110px;
@@ -49,27 +139,9 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
+}*/
 
-main h2 {
-    color: #fff;
-    font-size: 3rem;
-    margin-bottom: 3rem;
-    text-align: center;
-}
-
-main form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-main form label {
-    display: flex;
-    flex-direction: column;
-}
-
-main form input {
+/*main form input {
     background: #020024;
     width: 300px;
     height: 45px;
@@ -79,41 +151,41 @@ main form input {
     font-size: 1rem;
     border: 1px solid #040B18;
     border-radius: 8px;
+}*/
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    text-align: center;
 }
 
-main form input[type="submit"] {
+.footer .other-buttons {
+    margin-top: 1rem;
+    padding: 0.4rem;
+    font-size: 1rem;
     cursor: pointer;
-    width: 50%;
-    margin-top: 4rem;
-    border: none;
-    border-radius: 32px;
-    background: rgb(115, 111, 117);
-    color: white;
-    font-size: 1.1rem;
-    transition: all .3s ease-in-out;
 }
 
-main form input[type="submit"]:hover {
-    background: #020024;
-    transition: all .3s ease-in-out;
-}
-
-#finalera {
-    margin-top: 40px;
-}
-
-#finalera p {
-    padding: 10px;
-}
-
-#finalera p a {
-    color: #fff;
+.footer .other-buttons .other-buttons-forgot a {
     text-decoration: none;
-}
-
-#finalera p a:hover {
     color: #020024;
-    transition: all .3s ease-in-out;
 }
 
+.footer .other-buttons .other-buttons-forgot a:hover {
+    color: #097941;
+}
+
+.footer .other-buttons .other-buttons-signup a:hover {
+    color: #097941;
+}
+
+.footer .other-buttons .other-buttons-signup a {
+    text-decoration: none;
+    color: #020024;
+}
+
+.footer .other-buttons .other-buttons-forgot {
+    margin-bottom: 10px;
+}
 
