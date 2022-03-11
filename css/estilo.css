@@ -35,6 +35,8 @@ header h1 {
     font-weight: bold;
     flex-direction: column;
     line-height: 10px;
+    text-decoration: underline;
+    color: #ccc;
 }
 
 li{

@@ -28,6 +28,15 @@ header {
 header h1{
     font-size: 40px;
     font-weight: bold;
+    text-decoration: underline;
+}
+
+a {
+    color: #ccc;
+}
+
+a:hover {
+    color: #020024;
 }
 
 main {
@@ -43,7 +52,7 @@ main {
 
 main h2 {
     color: #fff;
-    margin-bottom: 3rem;
+    margin-bottom: 10px;
     text-align: center;
 }
 

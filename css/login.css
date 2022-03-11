@@ -28,6 +28,15 @@ header {
 header h1{
     font-size: 40px;
     font-weight: bold;
+    text-decoration: underline;
+}
+
+a {
+    color: #ccc;
+}
+
+a:hover {
+    color: #020024;
 }
 
 main {
@@ -66,7 +75,7 @@ main form input {
     height: 45px;
     padding: 0 0.5rem;
     outline: none;
-    color: rgba(166, 166, 166);
+    color: rgba(166, 166, 166, 0.5);
     font-size: 1rem;
     border: 1px solid #040B18;
     border-radius: 8px;
