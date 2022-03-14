@@ -22,6 +22,37 @@ body {
     justify-content: center;
 }
 
+/*main {
+    border: 1px solid yellow;
+}*/
+
+/* "container" da logo */
+main .title {
+    /*border: 1px solid red;*/
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* texto da logo */
+main .title h1 {
+    font-size: 45px;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* link embutido na logo */
+main .title h1 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* estado hover da logo */
+main .title h1 a:hover {
+    color: #097941;
+}
+
 /* Trabalhando a caixa branca que engloba os elementos de login */
 main .container {
     max-width: 700px;
