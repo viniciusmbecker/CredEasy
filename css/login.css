@@ -63,7 +63,7 @@ main .container {
     border-radius: 8px;
 }
 
-/* Trabalhando os elementos de fonte do título do container*/
+/* Trabalhando os elementos de fonte do título do container */
 main .container h2 {
     font-weight: 600;
     margin-bottom: 2rem;
