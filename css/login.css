@@ -67,13 +67,15 @@ main .container {
 main .container h2 {
     font-weight: 600;
     margin-bottom: 2rem;
-    position: relative;
+    position: relative; /* elemento pai é relativo */
 }
 
-/* Trabalhando o sublinhado abaixo do título do container*/
-main .container h2::before {
-    content: '';
-    position: absolute;
+/* Trabalhando o sublinhado abaixo do título do container */
+/* Utilizando o pseudo-elemento after após o elemento h2. */ 
+/* Assim, não precisamos criar uma div e estilizá-la */
+main .container h2::after {
+    content: ''; /* sintaxe obrigatória do pseudo-elemento (neste caso específico, fica em branco mesmo)*/
+    position: absolute; /* posição absoluta em relação ao pai */
     height: 4px; /* altura do sublinhado */
     width: 227px; /* compimento do sublinado */
     bottom: 3px; /* espaço do sublinhado até o texto */
@@ -82,19 +84,25 @@ main .container h2::before {
     background: linear-gradient(45deg, #097941, #020024);
 }
 
+/* Faz o botão de entrar ocupar a linha inteira */
 main form {
     display: flex;
     flex-direction: column;
 }
 
+/**/
 main form .input-field {
     position: relative;
 }
 
+/* Trabalhando os "campos" do input */
+/* Aplicando uma margin entre a primeira entrada do input e o título*/
+/* Pseudo-classe firstchild: seleciona apenas o primeiro filho */
 main form .input-field:first-child {
     margin-bottom: 1.5rem;
 }
 
+/* */
 main form .input-field .underline::before {
     content: '';
     position: absolute;
@@ -113,21 +121,27 @@ main form .input-field .underline::after {
     bottom: -5px;
     left: 0;
     background: linear-gradient(45deg, #097941, #020024);
-    transform: scaleX(0);
+    transform: scaleX(0); /* tamanho do item igual a zero, no caso a linha colorida */
     transition: all 0.3s ease-in-out;
     transform-origin: left;
 }
 
+/* Pseudo-classe focus: é aplicada quando um elemento recebe foco 
+(é selecionado pelo usuário) */
+/* Seletor ~ : seletor de irmãos. Aqui, seleciona o elemento anterior que
+compartilha o mesmo pai. */
 main form .input-field input:focus ~.underline::after {
-    transform: scaleX(1);
+    transform: scaleX(1); /* aumenta o tamanho do item, no caso a linha colorida */
 }
 
+/* Trabalhando elementos do input*/
 main form .input-field input {
     outline: none; /* tira o contorno dos "campos" */
     font-size: 1rem; /* tamanho da fonte dos textos do placeholder */
     color: rgba(0,0,0,0.7); /* mexe na cor do texto do input */
 }
 
+/* Pseudo elemento placeholder */
 main form .input-field input::placeholder {
     color: rgba(0,0,0,0.5); /* cor dos textos do placeholder */
 }
