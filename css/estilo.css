@@ -12,7 +12,8 @@
 
 /* Elemento body */
 body {
-    max-width: 1200px;
+    width: 100vw;
+    height: 100vh;
     background: linear-gradient(45deg, #097941, #020024);
     background-repeat: no-repeat;
     margin: 0 auto;
@@ -23,7 +24,6 @@ body {
 /* Elemento header */
 header {
 /*    border: 1px solid red;*/
-    padding: 20px 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -35,6 +35,8 @@ header h1 {
     font-weight: bold;
     flex-direction: column;
     line-height: 10px;
+    text-decoration: underline;
+    color: #fff;
 }
 
 li{
@@ -43,7 +45,7 @@ li{
 }
 
 a{
-    color: #ccc;
+    color: #fff;
     text-decoration: none;
 }
 

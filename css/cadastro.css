@@ -1,5 +1,7 @@
+/* Importando a fonte Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 
+/* Resetando os elementos da página */
 * {
     margin: 0;
     padding: 0;
@@ -8,82 +10,190 @@
     font-family: "Poppins", sans-serif;
 }
 
+/* Trabalhando a página */
 body {
     background: linear-gradient(45deg, #097941, #020024);
     background-repeat: no-repeat;
-    display: flex;
-    font-weight: 500;
-    color: #ccc;
+    padding: 10px;
     min-height: 100vh;
     min-width: 100vw;
-}
-
-header {
-    position: absolute;
-    border: 1px solid blue;
-    height: 7vw;
-    padding: 20px;
-}
-
-header h1{
-    font-size: 40px;
-    font-weight: bold;
-}
-
-main {
-    border: 2px solid yellow;
-    margin-top: 110px;
-    height: 45vw;
-    width: 100vw;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-main h2 {
-    color: #fff;
-    margin-bottom: 3rem;
-    text-align: center;
-}
+/*main {
+    border: 1px solid yellow;
+}*/
 
-main form {
+/* "container" da logo */
+main .title {
+    /*border: 1px solid red;*/
+    margin-bottom: 20px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
-main form label {
-    display: flex;
-    flex-direction: column;
+/* texto da logo */
+main .title h1 {
+    font-size: 45px;
+    text-decoration: underline;
+    font-weight: bold;
 }
 
-main form input {
-    background: #161923;
-    width: 300px;
-    height: 45px;
-    padding: 0 0.5rem;
-/*    margin-top: 0.5rem; */
-    outline: none;
-    color: rgba(166, 166, 166);
-    font-size: 1rem;
-    border: 1px solid #040B18;
+/* link embutido na logo */
+main .title h1 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* estado hover da logo */
+main .title h1 a:hover {
+    color: #097941;
+}
+
+/* Trabalhando a caixa branca (container) que engloba os elementos de login */
+main .container {
+    max-width: 768px;
+    width: 100%;
+    background: #fff;
+    padding: 2rem;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.8);
     border-radius: 8px;
 }
 
-main form input[type="submit"] {
+/* Trabalhando os elementos de fonte do título do container */
+main .container .titulo {
+    color: #020024;
+    font-weight: 600;
+    font-size: 25px;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+/* Trabalhando o sublinhado abaixo do título do container*/
+main .container .titulo::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    height: 4px;
+    width: 250px;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #097941, #020024);
+}
+
+main form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+main form .user-details .input-field {
+    /*border: 1px solid red;*/
+    margin-bottom: 15px;
+}
+
+/*.user-details .input-field .details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}*/
+
+.input-field {
+    position: relative;
+}
+
+form .input-field:first-child {
+    margin-bottom: 1.5rem;
+}
+
+.input-field .underline::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0,0,0,0.2);
+}
+
+.input-field .underline::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(45deg, #097941, #020024);
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+    transform-origin: left;
+}
+
+.input-field input:focus ~.underline::after {
+    transform: scaleX(1);
+}
+
+.input-field input {
+    outline: none;
+    font-size: 1rem;
+    color: rgba(0,0,0,0.7);
+}
+
+.input-field input::placeholder {
+    color: rgba(0,0,0,0.5);
+}
+
+form input[type="submit"] {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 0.4rem;
+    background: linear-gradient(to left, #097941, #020024);
     cursor: pointer;
-    width: 50%;
-    margin-top: 10px;
-    border: none;
-    border-radius: 32px;
-    background: rgb(115, 111, 117);
-    color: white;
-    font-size: 1.1rem;
-    transition: all .3s ease-in-out;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 300;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
 }
 
 main form input[type="submit"]:hover {
-    background: #020024;
+    letter-spacing: 1px;
+    background: linear-gradient(to right, #097941, #020024);
 }
 
+/* Classe que trabalha o espaço abaixo do botão de entrar */
+main .footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* Trabalhando o link dentro do espaço abaixo do botão de entrar */
+main .footer .other-button {
+    margin-top: 1rem;
+    padding: 0.4rem;
+    font-size: 1rem;
+}
+
+/* Trabalhando o link */
+main .footer .other-button .other-button-possui p {
+    text-decoration: none;
+    color: #020024;
+}
+
+/* Trabalhando o link */
+main .footer .other-button .other-button-possui a {
+    text-decoration: none;
+    color: #020024;
+    cursor: pointer; 
+}
+
+/* Trabalhando o link (estado hover) */
+main .footer .other-button .other-button-possui a:hover {
+    color: #097941;
+    text-decoration: underline;
+}

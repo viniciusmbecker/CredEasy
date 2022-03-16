@@ -1,5 +1,7 @@
+/* Importando a fonte Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 
+/* Resetando os elementos da página */
 * {
     margin: 0;
     padding: 0;
@@ -8,103 +10,203 @@
     font-family: "Poppins", sans-serif;
 }
 
+/* Trabalhando a página */
 body {
     background: linear-gradient(45deg, #097941, #020024);
     background-repeat: no-repeat;
+    height: 100vh; /* 100% da altura da viewport */
+    width: 100vw; /* 100% da largura da viewport */
     display: flex;
-    font-weight: 500;
-    color: #ccc;
-    min-height: 100vh;
-    min-width: 100vw;
-}
-
-header {
-    position: absolute;
-    border: 1px solid blue;
-    height: 7vw;
-    padding: 20px;
-}
-
-header h1{
-    font-size: 40px;
-    font-weight: bold;
-}
-
-main {
-    position: relative;
-    border: 1px solid red;
-    margin-top: 110px;
-    height: 45vw;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-main h2 {
-    color: #fff;
-    font-size: 3rem;
-    margin-bottom: 3rem;
-    text-align: center;
-}
+/*main {
+    border: 1px solid yellow;
+}*/
 
-main form {
+/* "container" da logo */
+main .title {
+    /*border: 1px solid red;*/
+    margin-bottom: 20px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
-main form label {
-    display: flex;
-    flex-direction: column;
+/* texto da logo */
+main .title h1 {
+    font-size: 45px;
+    text-decoration: underline;
+    font-weight: bold;
 }
 
-main form input {
-    background: #020024;
-    width: 300px;
-    height: 45px;
-    padding: 0 0.5rem;
-    outline: none;
-    color: rgba(166, 166, 166);
-    font-size: 1rem;
-    border: 1px solid #040B18;
-    border-radius: 8px;
-}
-
-main form input[type="submit"] {
-    cursor: pointer;
-    width: 50%;
-    margin-top: 4rem;
-    border: none;
-    border-radius: 32px;
-    background: rgb(115, 111, 117);
-    color: white;
-    font-size: 1.1rem;
-    transition: all .3s ease-in-out;
-}
-
-main form input[type="submit"]:hover {
-    background: #020024;
-    transition: all .3s ease-in-out;
-}
-
-#finalera {
-    margin-top: 40px;
-}
-
-#finalera p {
-    padding: 10px;
-}
-
-#finalera p a {
+/* link embutido na logo */
+main .title h1 a {
     color: #fff;
     text-decoration: none;
 }
 
-#finalera p a:hover {
-    color: #020024;
-    transition: all .3s ease-in-out;
+/* estado hover da logo */
+main .title h1 a:hover {
+    color: #097941;
 }
 
+/* Trabalhando a caixa branca (container) que engloba os elementos de login */
+main .container {
+    /*border: 1px solid blue;*/
+    background: #fff;
+    max-width: 350px;
+    min-height: 50vh;
+    padding: 2rem; /* padding dos elementos que estão dentro do container */
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.8); /* sombra ao redor do container */
+    border-radius: 8px;
+}
+
+/* Trabalhando os elementos de fonte do título do container */
+main .container h2 {
+    font-weight: 600;
+    margin-bottom: 2rem;
+    position: relative; /* elemento pai é relativo */
+}
+
+/* Trabalhando o sublinhado abaixo do título do container */
+/* Utilizando o pseudo-elemento after após o elemento h2. */ 
+/* Assim, não precisamos criar uma div e estilizá-la */
+main .container h2::after {
+    content: ''; /* sintaxe obrigatória do pseudo-elemento (neste caso específico, fica em branco mesmo)*/
+    position: absolute; /* posição absoluta em relação ao pai */
+    height: 4px; /* altura do sublinhado */
+    width: 227px; /* compimento do sublinado */
+    bottom: 3px; /* espaço do sublinhado até o texto */
+    left: 0; /* ponto inicial do sublinhado */
+    border-radius: 8px;
+    background: linear-gradient(45deg, #097941, #020024);
+}
+
+/* Faz o botão de entrar ocupar a linha inteira */
+main form {
+    display: flex;
+    flex-direction: column;
+}
+
+/**/
+main form .input-field {
+    position: relative;
+}
+
+/* Trabalhando os "campos" do input */
+/* Aplicando uma margin entre a primeira entrada do input e o título*/
+/* Pseudo-classe firstchild: seleciona apenas o primeiro filho */
+main form .input-field:first-child {
+    margin-bottom: 1.5rem;
+}
+
+/* */
+main form .input-field .underline::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0,0,0,0.2);
+}
+
+main form .input-field .underline::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(45deg, #097941, #020024);
+    transform: scaleX(0); /* tamanho do item igual a zero, no caso a linha colorida */
+    transition: all 0.3s ease-in-out;
+    transform-origin: left;
+}
+
+/* Pseudo-classe focus: é aplicada quando um elemento recebe foco 
+(é selecionado pelo usuário) */
+/* Seletor ~ : seletor de irmãos. Aqui, seleciona o elemento anterior que
+compartilha o mesmo pai. */
+main form .input-field input:focus ~.underline::after {
+    transform: scaleX(1); /* aumenta o tamanho do item, no caso a linha colorida */
+}
+
+/* Trabalhando elementos do input*/
+main form .input-field input {
+    outline: none; /* tira o contorno dos "campos" */
+    font-size: 1rem; /* tamanho da fonte dos textos do placeholder */
+    color: rgba(0,0,0,0.7); /* mexe na cor do texto do input */
+}
+
+/* Pseudo elemento placeholder */
+main form .input-field input::placeholder {
+    color: rgba(0,0,0,0.5); /* cor dos textos do placeholder */
+}
+
+/* Trabalhando o botão de entrar */
+main form input[type="submit"] {
+    margin-top: 2rem; /* espaço entre o campo de senha e o botão */
+    padding: 0.4rem; /* padding do texto dentro do botão */
+    background: linear-gradient(to left, #097941, #020024); /* efeito do gradiente indo para a direita*/
+    cursor: pointer; /* muda o ícone do cursor quando passa pelo botão */
+    color: #fff; /* cor do texto dentro do botão */
+    font-size: 1rem; /* tamanho da fonte do texto dentro do botão */
+    font-weight: 300; /* peso da fonte do texto dentro do botão */
+    border-radius: 4px; 
+    transition: all 0.3s ease-in-out;
+}
+
+/* Trabalhando o estado hover do botão de entrar */
+main form input[type="submit"]:hover {
+    letter-spacing: 2px; /* espaço entre as letras do texto dentro do botão*/
+    background: linear-gradient(to right, #097941, #020024); /* efeito do gradiente indo para a direita*/
+}
+
+/* Classe que trabalha o espaço abaixo do botão de entrar */
+main .footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* Trabalhando os dois links dentro do espaço abaixo do botão de entrar */
+main .footer .other-buttons {
+    margin-top: 1rem;
+    padding: 0.4rem;
+    font-size: 1rem;
+    cursor: pointer; 
+}
+
+/* Trabalhando o primeiro link */
+main .footer .other-buttons .other-buttons-forgot a {
+    text-decoration: none;
+    color: #020024;
+}
+
+/* Trabalhando o primeiro link (estado hover) */
+main .footer .other-buttons .other-buttons-forgot a:hover {
+    color: #097941;
+    text-decoration: underline;
+}
+
+/* Trabalhando o segundo link */
+main .footer .other-buttons .other-buttons-signup a {
+    text-decoration: none;
+    color: #020024;
+}
+
+/* Trabalhando o segundo link (estado hover) */
+main .footer .other-buttons .other-buttons-signup a:hover {
+    color: #097941;
+    text-decoration: underline;
+}
+
+/* Espaço entre o primeiro link e o botão de entrar */
+main .footer .other-buttons .other-buttons-forgot {
+    margin-bottom: 10px;
+}
 

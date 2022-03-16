@@ -5,49 +5,61 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/login.css">
-        <title>Entrar</title>
+        <title>Página de Login</title>
     </head>
     <body>
-
-        <!-- Início do cabeçalho-->
-        <header>
-            <div>
-                <h1>CredEasy</h1>
-            </div>
-
-        </header>
-        <!-- Final do cabeçalho-->
-
+         
+        <!-- Início do principal-->
         <main>
-            <h2>Entre na sua conta</h2>
-
-        <!-- Início do formulário -->
-        <form>
-            <!-- Início do campo Email -->
-            <div class="campos">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" required>
+            <!-- Início do "cabeçalho" com logo -->
+            <div class="title">
+                <h1>
+                   <a href="index.html">CredEasy</a>
+                </h1>
             </div>
-            <!-- Final do campo Email -->
+            <!-- Final do "cabeçalho" com logo -->
 
-            <!-- Início do campo Senha -->
-            <div class="campos">
-                <label for="senha">Senha</label>
-                <input type="text" name="senha" id="senha" required>
+            <!-- Início do container -->
+            <div class="container">
+                <h2>Entre na sua conta</h2>
+
+            <!-- Início do formulário -->
+            <form action="#">
+                <!-- Início do campo Email -->
+                <div class="input-field">
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                    <div class="underline"></div>
+                </div>
+                <!-- Final do campo Email -->
+
+                <!-- Início do campo Senha -->
+                <div class="input-field">
+                    <input type="password" name="senha" id="senha" placeholder="Senha" required>
+                    <div class="underline"></div>
+                </div>
+                <!-- Final do campo senha -->
+
+                <!-- Botão para enviar o formulário -->
+                <input type="submit" value="Entrar">
+
+            </form>
+            <!-- Final do formulário -->
+
+            <!-- Início dos botoẽs -->
+            <div class="footer">
+            <div class="other-buttons">
+                <div class="other-buttons-forgot">
+                    <a href="recuperacao-senha.html">Esqueci minha senha > </a>
+                </div>
+                <div class="other-buttons-signup">
+                    <a href="cadastro.html">Ainda não sou cliente > </a>
+                </div>
             </div>
-            <!-- Final do campo senha -->
-
-            <!-- Botão para enviar o formulário -->
-            <input type="submit" value="Cadastar" id="button">
-
-        </form>
-        <!-- Final do formulário -->
-
-        <div id="finalera">
-            <p> <a href="#">Esqueci minha senha > </a></p>
-            <p> <a href="cadastro.html">Ainda não sou cliente > </a></p>
-        </div>
-
+            </div>
+            <!-- Final dos botoẽs -->
+            </div>
+            <!-- Final do container -->
         </main>
+        <!-- Final do principal -->
     </body>
 </html>
