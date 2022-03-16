@@ -93,6 +93,7 @@ main form .user-details {
 main form .user-details .input-field {
     /*border: 1px solid red;*/
     margin-bottom: 15px;
+    width: 45%;
 }
 
 /*.user-details .input-field .details {
