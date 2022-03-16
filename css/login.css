@@ -102,7 +102,7 @@ main form .input-field:first-child {
     margin-bottom: 1.5rem;
 }
 
-/* */
+/* Classe underline (responsável pelo sublinhado dos "campos") */
 main form .input-field .underline::before {
     content: '';
     position: absolute;
@@ -113,6 +113,7 @@ main form .input-field .underline::before {
     background: rgba(0,0,0,0.2);
 }
 
+/* Classe underline (responsável pelo sublinhado dos "campos") */
 main form .input-field .underline::after {
     content: '';
     position: absolute;
