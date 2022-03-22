@@ -2,46 +2,66 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
-        
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <link rel="stylesheet" href="css/estilo.css">
+
         <title>CredEasy</title>
     </head>
     
     <body>
-
         <!-- Início do cabeçalho-->
-        <header>
-            <div>
+
+        <header class="cabecalho">
+            <div class="titulo-logo">
                 <h1>CredEasy</h1>
             </div>
 
             <!-- Início da barra de navegação -->
-            <nav>
-                <ul>
-                    <li> <a href="#">Home</a></li>
-                    <li> <a href="#">Sobre</a></li>
-                    <li> <a href="#">Contato</a></li>
-                    <li> <a href="login.html" id="botao-login">Entrar</a></li>
-                    <li> <a href="cadastro.html" id="botao-cadastrar">Cadastrar</a></li>
-                </ul>
+
+            <nav class="cabecalho-menu">
+                <a class="cabecalho-menu-item" href="#">Home</a>
+                <a class="cabecalho-menu-item" href="#">Sobre</a>
+                <a class="cabecalho-menu-item" href="#">Produtos</a>
+                <a class="cabecalho-menu-item" href="#">Contato</a>
+                <a class="cabecalho-menu-item" href="login.html">Entrar</a>
+                <a class="cabecalho-menu-item" href="cadastro.html">Cadastrar</a>
             </nav>
             <!-- Final da barra de navegação -->
         </header>
         <!-- Final do cabeçalho-->
 
-        <!-- Início do conteúdo principal -->
-        <main>
-            <aside>
-                <p>Precisa de dinheiro e não sabe aonde conseguir?</p>
-            </aside>
+        <!-- Início do container -->
+        <main class="container">
+        
+            <!-- Início do conteúdo principal -->
+            <section class="conteudo-principal">
 
-            <article>
-                <img src="/img/dinheiro.jpg" alt="dinheiro na mão">
-            </article>
+                <!-- Início dos textos do conteúdo principal -->
+                <div class="conteudo-principal-escrito">
+
+                    <!-- Título do conteúdo principal -->
+                    <h1 class="conteudo-principal-escrito-titulo">
+                        Precisando de dinheiro?</h1>
+
+                    <!-- Parágrafo do conteúdo principal-->
+                    <p class="conteudo-principal-escrito-paragrafo">
+                        O seu orçamento está apertado? Nós temos a melhor 
+                        solução para você.
+                    </p>
+                </div>
+                <!-- Final dos textos do conteúdo principal -->
+
+                <!-- Início da imagem do conteúdo pricipal -->
+                <div class="conteudo-principal-imagem">
+                    <img src="img/mulher-segurando-moeda.png" alt="Mulher segurando uma moeda de um real">
+                </div>
+                <!-- Final da imagem do conteúdo principal -->
+            </section>
+            <!-- Final do conteúdo principal -->
         </main>
-        <!-- Final do conteúdo principal -->
+        <!-- Final do container -->
 
 
         <!-- Início do rodapé -->

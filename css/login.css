@@ -12,7 +12,8 @@
 
 /* Trabalhando a página */
 body {
-    background: linear-gradient(45deg, #097941, #020024);
+    background: linear-gradient(45deg,#7AC141,#002A5C);
+    /*background: linear-gradient(45deg, #097941, #020024);*/
     background-repeat: no-repeat;
     height: 100vh; /* 100% da altura da viewport */
     width: 100vw; /* 100% da largura da viewport */
@@ -43,13 +44,14 @@ main .title h1 {
 
 /* link embutido na logo */
 main .title h1 a {
-    color: #fff;
+    color: #B2B7BB;
     text-decoration: none;
 }
 
 /* estado hover da logo */
 main .title h1 a:hover {
-    color: #097941;
+    /*color: #097941;*/
+    color: #7AC142;
 }
 
 /* Trabalhando a caixa branca (container) que engloba os elementos de login */
@@ -81,7 +83,8 @@ main .container h2::after {
     bottom: 3px; /* espaço do sublinhado até o texto */
     left: 0; /* ponto inicial do sublinhado */
     border-radius: 8px;
-    background: linear-gradient(45deg, #097941, #020024);
+    background: linear-gradient(45deg, #7AC142,#002A5C);
+    /*background: linear-gradient(45deg, #097941, #020024);*/
 }
 
 /* Faz o botão de entrar ocupar a linha inteira */
@@ -121,7 +124,8 @@ main form .input-field .underline::after {
     width: 100%;
     bottom: -5px;
     left: 0;
-    background: linear-gradient(45deg, #097941, #020024);
+    /*background: linear-gradient(45deg, #097941, #020024);*/
+    background: linear-gradient(45deg,#7AC142,#002A5C);
     transform: scaleX(0); /* tamanho do item igual a zero, no caso a linha colorida */
     transition: all 0.3s ease-in-out;
     transform-origin: left;
@@ -151,9 +155,9 @@ main form .input-field input::placeholder {
 main form input[type="submit"] {
     margin-top: 2rem; /* espaço entre o campo de senha e o botão */
     padding: 0.4rem; /* padding do texto dentro do botão */
-    background: linear-gradient(to left, #097941, #020024); /* efeito do gradiente indo para a direita*/
+    background: linear-gradient(to left, #7AC142, #002A5C); /* efeito do gradiente indo para a direita*/
     cursor: pointer; /* muda o ícone do cursor quando passa pelo botão */
-    color: #fff; /* cor do texto dentro do botão */
+    color: #B2B7BB; /* cor do texto dentro do botão */
     font-size: 1rem; /* tamanho da fonte do texto dentro do botão */
     font-weight: 300; /* peso da fonte do texto dentro do botão */
     border-radius: 4px; 
@@ -163,7 +167,7 @@ main form input[type="submit"] {
 /* Trabalhando o estado hover do botão de entrar */
 main form input[type="submit"]:hover {
     letter-spacing: 2px; /* espaço entre as letras do texto dentro do botão*/
-    background: linear-gradient(to right, #097941, #020024); /* efeito do gradiente indo para a direita*/
+    background: linear-gradient(to right, #7AC142, #002A5C); /* efeito do gradiente indo para a direita*/
 }
 
 /* Classe que trabalha o espaço abaixo do botão de entrar */
@@ -185,7 +189,7 @@ main .footer .other-buttons {
 /* Trabalhando o primeiro link */
 main .footer .other-buttons .other-buttons-forgot a {
     text-decoration: none;
-    color: #020024;
+    color: #002A5C;
 }
 
 /* Trabalhando o primeiro link (estado hover) */
@@ -197,7 +201,7 @@ main .footer .other-buttons .other-buttons-forgot a:hover {
 /* Trabalhando o segundo link */
 main .footer .other-buttons .other-buttons-signup a {
     text-decoration: none;
-    color: #020024;
+    color: #002A5C;
 }
 
 /* Trabalhando o segundo link (estado hover) */
