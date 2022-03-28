@@ -4,62 +4,88 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilo.css">
         <link rel="stylesheet" href="css/login.css">
         <title>Página de Login</title>
     </head>
     <body>
-         
-        <!-- Início do principal-->
-        <main>
-            <!-- Início do "cabeçalho" com logo -->
-            <div class="title">
+
+        <!-- Início do cabeçalho-->
+        <header class="cabecalho">
+            <div class="titulo-logo">
                 <h1>
-                   <a href="index.html">CredEasy</a>
+                    <a href="index.html">CredEasy</a>
                 </h1>
             </div>
-            <!-- Final do "cabeçalho" com logo -->
+        
+            <!-- Início da barra de navegação -->
+                <nav class="cabecalho-menu">
+                    <a class="cabecalho-menu-item" href="index.html">Home</a>
+                    <a class="cabecalho-menu-item" href="#">Sobre</a>
+                    <a class="cabecalho-menu-item" href="#">Produtos</a>
+                    <a class="cabecalho-menu-item" href="#">Contato</a>
+                </nav>
+        
+                <div class="cabecalho-menu-botao">
+                    <a class="cabecalho-menu-botao-item" href="login.html">Entrar</a>
+                    <a class="cabecalho-menu-botao-item" href="cadastro.html">Cadastrar</a>
+                </div>
+            <!-- Final da barra de navegação -->
+        </header>
+        <!-- Final do cabeçalho-->
+        
+         
+        <!-- Início do conteúdo principal-->
+        <section class="conteudo-principal">
 
             <!-- Início do container -->
             <div class="container">
                 <h2>Entre na sua conta</h2>
 
-            <!-- Início do formulário -->
-            <form action="#">
-                <!-- Início do campo Email -->
-                <div class="input-field">
-                    <input type="email" name="email" id="email" placeholder="Email" required>
-                    <div class="underline"></div>
-                </div>
-                <!-- Final do campo Email -->
+                <!-- Início do formulário -->
+                <form action="#">
+                    <!-- Início do campo Email -->
+                    <div class="input-field">
+                        <input type="email" name="email" id="email" placeholder="Email" required>
+                        <div class="underline"></div>
+                    </div>
+                    <!-- Final do campo Email -->
 
-                <!-- Início do campo Senha -->
-                <div class="input-field">
-                    <input type="password" name="senha" id="senha" placeholder="Senha" required>
-                    <div class="underline"></div>
-                </div>
-                <!-- Final do campo senha -->
+                    <!-- Início do campo Senha -->
+                    <div class="input-field">
+                        <input type="password" name="senha" id="senha" placeholder="Senha" required>
+                        <div class="underline"></div>
+                    </div>
+                    <!-- Final do campo senha -->
 
-                <!-- Botão para enviar o formulário -->
-                <input type="submit" value="Entrar">
+                    <!-- Botão para enviar o formulário -->
+                    <input type="submit" value="Entrar">
 
-            </form>
-            <!-- Final do formulário -->
+                </form>
+                <!-- Final do formulário -->
 
-            <!-- Início dos botoẽs -->
-            <div class="footer">
-            <div class="other-buttons">
-                <div class="other-buttons-forgot">
-                    <a href="recuperacao-senha.html">Esqueci minha senha > </a>
+                <!-- Início dos botoẽs -->
+                <div class="footer">
+                    <div class="other-buttons">
+                        <div class="other-buttons-forgot">
+                            <a href="recuperacao-senha.html">Esqueci minha senha </a>
+                        </div>
+                        <div class="other-buttons-signup">
+                            <a href="cadastro.html">Ainda não sou cliente </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="other-buttons-signup">
-                    <a href="cadastro.html">Ainda não sou cliente > </a>
-                </div>
-            </div>
-            </div>
-            <!-- Final dos botoẽs -->
+                <!-- Final dos botoẽs -->
             </div>
             <!-- Final do container -->
-        </main>
+
+        </section>
         <!-- Final do principal -->
+
+        <!-- Início do rodapé -->
+            <footer>
+                <p class="copyright">&copy; CredEasy - 2022</p>
+            </footer>
+        <!-- Final do rodapé -->
     </body>
 </html>

@@ -1,63 +1,98 @@
-/* Importando a fonte Poppins */
+/* Importa a fonte Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 
-/* Resetando os elementos da página */
+/* Reset CSS (reseta todos os elementos da página) */
 * {
     margin: 0;
     padding: 0;
     border: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;    
     font-family: "Poppins", sans-serif;
 }
 
-/* Trabalhando a página */
-body {
-    background: linear-gradient(45deg,#7AC141,#002A5C);
-    /*background: linear-gradient(45deg, #097941, #020024);*/
-    background-repeat: no-repeat;
-    height: 100vh; /* 100% da altura da viewport */
-    width: 100vw; /* 100% da largura da viewport */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/*main {
-    border: 1px solid yellow;
+/* Definindo o tamanho do corpo da página */
+/*body {
+    width: 100vw;
+    height: 100vh;
 }*/
 
-/* "container" da logo */
-main .title {
-    /*border: 1px solid red;*/
-    margin-bottom: 20px;
+/* Trabalhando o cabeçalho */
+.cabecalho {
+/*    border: 1px solid red;*/
+    background: #002244;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
+    padding: 14px;
 }
 
-/* texto da logo */
-main .title h1 {
-    font-size: 45px;
-    text-decoration: underline;
+/* Trabalhando o logo */
+.titulo-logo a {
+    /*font-size: 40px;*/
     font-weight: bold;
+    text-decoration: underline;
+    color: #A5ACAF;
 }
 
-/* link embutido na logo */
-main .title h1 a {
-    color: #B2B7BB;
+/* Trabalhando o menu */
+.cabecalho-menu {
+    display: flex;
+    gap: 32px
+}
+
+/* Trabalhando os itens do menu */
+.cabecalho-menu-item {
+    color: #fff;
+    text-decoration: none;
+}
+.cabecalho-menu-item:hover {
+    font-weight: 700;
+    text-decoration: underline;
+    color: #A5ACAF;
+    /*transition: 0.3s all;*/
+}
+
+.cabecalho-menu-botao {
+    display: flex;
+    gap: 32px;
+}
+
+.cabecalho-menu-botao-item {
+    border: 2px solid #69BE28;
+    border-radius: 10px;
+    padding: 5px;
+    color: #fff;
     text-decoration: none;
 }
 
-/* estado hover da logo */
-main .title h1 a:hover {
-    /*color: #097941;*/
-    color: #7AC142;
+.cabecalho-menu-botao-item:hover {
+    background:#69BE28;
+    border: 2px solid #002244;
+    color: #002244;
+    text-decoration: none;
+    font-weight: 700;
 }
 
+/* Trabalhando o container */
+/*.container {
+    border: 1px solid violet;
+    border-top: 2px solid #A5ACAF;
+}*/
+
+/* Trabalhando o conteúdo principal */
+.conteudo-principal {
+    background: #69BE28;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 89.3vh;
+    /*width: 100vw;*/
+}
 /* Trabalhando a caixa branca (container) que engloba os elementos de login */
-main .container {
+.container {
     /*border: 1px solid blue;*/
-    background: #fff;
+    background: #FFF;
     max-width: 350px;
     min-height: 50vh;
     padding: 2rem; /* padding dos elementos que estão dentro do container */
@@ -66,7 +101,7 @@ main .container {
 }
 
 /* Trabalhando os elementos de fonte do título do container */
-main .container h2 {
+.container h2 {
     font-weight: 600;
     margin-bottom: 2rem;
     position: relative; /* elemento pai é relativo */
@@ -75,7 +110,7 @@ main .container h2 {
 /* Trabalhando o sublinhado abaixo do título do container */
 /* Utilizando o pseudo-elemento after após o elemento h2. */ 
 /* Assim, não precisamos criar uma div e estilizá-la */
-main .container h2::after {
+.container h2::after {
     content: ''; /* sintaxe obrigatória do pseudo-elemento (neste caso específico, fica em branco mesmo)*/
     position: absolute; /* posição absoluta em relação ao pai */
     height: 4px; /* altura do sublinhado */
@@ -83,30 +118,30 @@ main .container h2::after {
     bottom: 3px; /* espaço do sublinhado até o texto */
     left: 0; /* ponto inicial do sublinhado */
     border-radius: 8px;
-    background: linear-gradient(45deg, #7AC142,#002A5C);
+    background: linear-gradient(45deg, #69BE28,#002244);
     /*background: linear-gradient(45deg, #097941, #020024);*/
 }
 
 /* Faz o botão de entrar ocupar a linha inteira */
-main form {
+form {
     display: flex;
     flex-direction: column;
 }
 
 /**/
-main form .input-field {
+form .input-field {
     position: relative;
 }
 
 /* Trabalhando os "campos" do input */
 /* Aplicando uma margin entre a primeira entrada do input e o título*/
 /* Pseudo-classe firstchild: seleciona apenas o primeiro filho */
-main form .input-field:first-child {
+form .input-field:first-child {
     margin-bottom: 1.5rem;
 }
 
 /* Classe underline (responsável pelo sublinhado dos "campos") */
-main form .input-field .underline::before {
+form .input-field .underline::before {
     content: '';
     position: absolute;
     height: 1px;
@@ -117,7 +152,7 @@ main form .input-field .underline::before {
 }
 
 /* Classe underline (responsável pelo sublinhado dos "campos") */
-main form .input-field .underline::after {
+form .input-field .underline::after {
     content: '';
     position: absolute;
     height: 1px;
@@ -125,7 +160,7 @@ main form .input-field .underline::after {
     bottom: -5px;
     left: 0;
     /*background: linear-gradient(45deg, #097941, #020024);*/
-    background: linear-gradient(45deg,#7AC142,#002A5C);
+    background: linear-gradient(45deg,#69BE28,#002244);
     transform: scaleX(0); /* tamanho do item igual a zero, no caso a linha colorida */
     transition: all 0.3s ease-in-out;
     transform-origin: left;
@@ -135,43 +170,44 @@ main form .input-field .underline::after {
 (é selecionado pelo usuário) */
 /* Seletor ~ : seletor de irmãos. Aqui, seleciona o elemento anterior que
 compartilha o mesmo pai. */
-main form .input-field input:focus ~.underline::after {
+form .input-field input:focus ~.underline::after {
     transform: scaleX(1); /* aumenta o tamanho do item, no caso a linha colorida */
 }
 
 /* Trabalhando elementos do input*/
-main form .input-field input {
+form .input-field input {
     outline: none; /* tira o contorno dos "campos" */
     font-size: 1rem; /* tamanho da fonte dos textos do placeholder */
     color: rgba(0,0,0,0.7); /* mexe na cor do texto do input */
+    background: #FFF;
 }
 
 /* Pseudo elemento placeholder */
-main form .input-field input::placeholder {
+form .input-field input::placeholder {
     color: rgba(0,0,0,0.5); /* cor dos textos do placeholder */
 }
 
 /* Trabalhando o botão de entrar */
-main form input[type="submit"] {
+form input[type="submit"] {
     margin-top: 2rem; /* espaço entre o campo de senha e o botão */
     padding: 0.4rem; /* padding do texto dentro do botão */
-    background: linear-gradient(to left, #7AC142, #002A5C); /* efeito do gradiente indo para a direita*/
+    background: linear-gradient(to left, #69BE28, #002244); /* efeito do gradiente indo para a direita*/
     cursor: pointer; /* muda o ícone do cursor quando passa pelo botão */
-    color: #B2B7BB; /* cor do texto dentro do botão */
+    color: #FFF; /* cor do texto dentro do botão */
     font-size: 1rem; /* tamanho da fonte do texto dentro do botão */
-    font-weight: 300; /* peso da fonte do texto dentro do botão */
+    font-weight: 500; /* peso da fonte do texto dentro do botão */
     border-radius: 4px; 
     transition: all 0.3s ease-in-out;
 }
 
 /* Trabalhando o estado hover do botão de entrar */
-main form input[type="submit"]:hover {
-    letter-spacing: 2px; /* espaço entre as letras do texto dentro do botão*/
-    background: linear-gradient(to right, #7AC142, #002A5C); /* efeito do gradiente indo para a direita*/
+form input[type="submit"]:hover {
+    letter-spacing: 1px; /* espaço entre as letras do texto dentro do botão*/
+    background: linear-gradient(to right, #69BE28, #002244); /* efeito do gradiente indo para a direita*/
 }
 
 /* Classe que trabalha o espaço abaixo do botão de entrar */
-main .footer {
+.footer {
     display: flex;
     flex-direction: column;
     margin-top: 1rem;
@@ -179,7 +215,7 @@ main .footer {
 }
 
 /* Trabalhando os dois links dentro do espaço abaixo do botão de entrar */
-main .footer .other-buttons {
+.footer .other-buttons {
     margin-top: 1rem;
     padding: 0.4rem;
     font-size: 1rem;
@@ -187,31 +223,56 @@ main .footer .other-buttons {
 }
 
 /* Trabalhando o primeiro link */
-main .footer .other-buttons .other-buttons-forgot a {
+.footer .other-buttons .other-buttons-forgot a {
+    /*border: 1px solid black;*/
+    /*border-radius: 8px;*/
     text-decoration: none;
-    color: #002A5C;
+    color: #002244;
 }
 
 /* Trabalhando o primeiro link (estado hover) */
-main .footer .other-buttons .other-buttons-forgot a:hover {
-    color: #097941;
-    text-decoration: underline;
+.footer .other-buttons .other-buttons-forgot a:hover {
+    border: 2px solid #002244;
+    border-radius: 10px;
+    color: #69BE28;
+    background: #002244;
+    text-decoration: none;
+    padding: 3px;
+    font-weight: 700;
 }
 
 /* Trabalhando o segundo link */
-main .footer .other-buttons .other-buttons-signup a {
+.footer .other-buttons .other-buttons-signup a {
     text-decoration: none;
-    color: #002A5C;
+    color: #002244;
 }
 
 /* Trabalhando o segundo link (estado hover) */
-main .footer .other-buttons .other-buttons-signup a:hover {
-    color: #097941;
-    text-decoration: underline;
+.footer .other-buttons .other-buttons-signup a:hover {
+    border: 2px solid #002244;
+    border-radius: 10px;
+    color: #69BE28;
+    background: #002244;
+    text-decoration: none;
+    padding: 3px;
+    font-weight: 700;
 }
 
 /* Espaço entre o primeiro link e o botão de entrar */
-main .footer .other-buttons .other-buttons-forgot {
+.footer .other-buttons .other-buttons-forgot {
     margin-bottom: 10px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #002244;
+}
+.copyright {
+    /*margin-top: 20px;*/
+    color: #A5ACAF;
+    font-size: 16px;
+    /*text-align: center;*/
 }
 

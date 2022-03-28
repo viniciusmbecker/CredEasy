@@ -47,9 +47,10 @@ body {
     text-decoration: none;
 }
 .cabecalho-menu-item:hover {
+    font-weight: 700;
     text-decoration: underline;
     color: #A5ACAF;
-    transition: 0.3s all;
+    /*transition: 0.3s all;*/
 }
 
 .cabecalho-menu-botao {
@@ -66,8 +67,11 @@ body {
 }
 
 .cabecalho-menu-botao-item:hover {
-    color: #A5ACAF;
+    background:#69BE28;
+    border: 2px solid #002244;
+    color: #002244;
     text-decoration: none;
+    font-weight: 700;
 }
 
 /* Trabalhando o container */
@@ -111,26 +115,15 @@ body {
     display: flex;
 }
 
-
-
-/*#botao-login {
-    border: 2px solid rgb(5, 104, 21);
-    padding: 5px;
-    border-radius: 10px;
-}
-
-#botao-cadastrar {
-    border: 2px solid rgb(5, 104, 21);
-    padding: 5px;
-    border-radius: 10px;
-}*/
-
 footer {
     background: #002244;
 }
 .copyright {
-    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*margin-top: 20px;*/
     color: #A5ACAF;
     font-size: 16px;
-    text-align: center;
+    /*text-align: center;*/
 }

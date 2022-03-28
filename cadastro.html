@@ -9,16 +9,32 @@
     </head>
     <body>
 
-        <!-- Início do principal -->
-        <main>
-            <!-- Início do "cabeçalho" com logo -->
-            <div class="title">
+        <!-- Início do cabeçalho-->
+        <header class="cabecalho">
+            <div class="titulo-logo">
                 <h1>
-                    <a href="index.html">CredEasy</a> 
-                </h1>    
+                    <a href="index.html">CredEasy</a>
+                </h1>
             </div>
+                
+            <!-- Início da barra de navegação -->
+            <nav class="cabecalho-menu">
+                <a class="cabecalho-menu-item" href="index.html">Home</a>
+                <a class="cabecalho-menu-item" href="#">Sobre</a>
+                <a class="cabecalho-menu-item" href="#">Produtos</a>
+                <a class="cabecalho-menu-item" href="#">Contato</a>
+            </nav>
+                
+            <div class="cabecalho-menu-botao">
+                <a class="cabecalho-menu-botao-item" href="login.html">Entrar</a>
+                <a class="cabecalho-menu-botao-item" href="cadastro.html">Cadastrar</a>
+            </div>
+            <!-- Final da barra de navegação -->
+        </header>
+        <!-- Final do cabeçalho-->
 
-            <!-- Final do "cabeçalho" com logo -->
+        <!-- Início do conteúdo principal-->
+        <section class="conteudo-principal">
 
             <!-- Início do container -->
             <div class="container">   
@@ -98,7 +114,7 @@
                         <div class="other-button-possui">
                             <p>
                                 Já possui uma conta? 
-                                <a href="login.html">Entre aqui > </a>  
+                                <a href="login.html">Entre aqui </a>  
                             </p>                         
                         </div>
                     </div>
@@ -108,8 +124,14 @@
             </div>
             <!-- Final do container -->
 
-        </main>
-        <!-- Final do principal -->
+        </section>
+        <!-- Final do conteúdo principal -->
 
+
+        <!-- Início do rodapé -->
+        <footer>
+            <p class="copyright">&copy; CredEasy - 2022</p>
+        </footer>
+    <!-- Final do rodapé -->
     </body>
 </html>
