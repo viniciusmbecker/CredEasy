@@ -82,6 +82,7 @@
 
 /* Trabalhando o conteúdo principal */
 .conteudo-principal {
+    border-top: 2px solid #A5ACAF;
     background: #69BE28;
     display: flex;
     align-items: center;
