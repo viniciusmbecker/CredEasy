@@ -1,0 +1,223 @@
+/* Importa a fonte Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+/* Reset CSS (reseta todos os elementos da página) */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;    
+    font-family: "Poppins", sans-serif;
+}
+
+/* Definindo o tamanho do corpo da página */
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+/* ------------------------------------------------------------------------------------------------------
+------------------------------------------------- CABEÇALHO ---------------------------------------------
+------------------------------------------------------------------------------------------------------ */
+
+/* Trabalhando o cabeçalho */
+.cabecalho {
+/*    border: 1px solid red;*/
+    background: #002244;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 0.5rem;
+}
+
+/* Trabalhando o logo */
+.cabecalho-menu h1 {
+    font-size: 36px;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #A5ACAF;
+}
+
+/* Trabalhando o menu */
+.cabecalho-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Trabalhando os itens do menu */
+.cabecalho-menu a {
+    color: #fff;
+    text-decoration: none;
+}
+.cabecalho-menu a:hover {
+    font-weight: 700;
+    text-decoration: underline;
+    color: #A5ACAF;
+}
+
+/* Trabalhando o campo de pesquisa */
+.cabecalho-pesquisa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cabecalho-pesquisa div {
+    margin-right: 8px;
+}
+
+.pesquisa input {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #A5ACAF;
+}
+
+.pesquisa input:focus {
+    outline: 1.5px solid #69BE28;
+}
+
+/*.cabecalho-menu-botao {
+    display: flex;
+    gap: 32px;
+}*/
+
+.botao-entrar {
+    border: 2px solid #69BE28;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.botao-entrar:hover{
+    background:#69BE28;
+    border: 2px solid #002244;
+    color: #002244;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.botao-cadastrar {
+    border: 2px solid #69BE28;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.botao-cadastrar:hover {
+    background:#69BE28;
+    border: 2px solid #002244;
+    color: #002244;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
+/* ------------------------------------------------------------------------------------------------------
+------------------------------------------------- CONTAINER ---------------------------------------------
+------------------------------------------------------------------------------------------------------ */
+/* Trabalhando o container */
+.container {
+    /*border: 1px solid violet*/
+    border-top: 2px solid #A5ACAF;
+}
+
+/* Trabalhando o conteúdo principal */
+.conteudo-principal {
+    background: #69BE28;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.conteudo-principal-escrito {
+    /*border: 1px solid black*/
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.conteudo-principal-escrito-titulo {
+    font-weight: 200;
+    font-size: 40px;
+    color: #002244;
+}
+
+.conteudo-principal-escrito-paragrafo {
+    /*border: 1px solid red*/
+    font-weight: 200;
+    font-size: 18px;
+    color: #fff;
+}
+
+/* Trabalhando o campo de inserção de email */
+.formulario {
+    display: flex;
+}
+
+.formulario input {
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    width: 300px;
+    margin-right: 4px;
+}
+
+.formulario input:focus {
+    outline: 1.5px solid #002244;
+}
+
+#botao-cadastrar-principal {
+    background-color: #002244;
+    /*border-radius: 10px;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 8px;
+    color: #fff;
+}
+
+#botao-cadastrar-principal:hover {
+    /*border-radius: 10px;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 8px;
+    color: #A5ACAF;
+    font-weight: bold;
+    transition: 0.3s ease-out;
+}
+
+
+/* Trabalhando a imagem do conteúdo principal */
+.conteudo-principal-imagem {
+    /*border: 1px solid blue*/
+    display: flex;
+}
+
+footer {
+    background: #002244;
+}
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*margin-top: 20px;*/
+    color: #A5ACAF;
+    font-size: 16px;
+    /*text-align: center;*/
+}
