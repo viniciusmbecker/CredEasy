@@ -18,10 +18,10 @@
 
                 <nav class="cabecalho-menu">
                     <h1><a href="/home/index.html">CredEasy</a></h1>
-                    <a class="cabecalho-menu-item" href="/home/index.html">Home</a>
-                    <a class="cabecalho-menu-item" href="#">Sobre</a>
-                    <a class="cabecalho-menu-item" href="#">Produtos</a>
-                    <a class="cabecalho-menu-item" href="#">Contato</a>
+                    <a href="/home/index.html">Home</a>
+                    <a href="#">Sobre</a>
+                    <a href="#">Produtos</a>
+                    <a href="#">Contato</a>
                 </nav>
                 
                 <div class="cabecalho-pesquisa">
@@ -49,7 +49,7 @@
                 <div class="titulo">Cadastre sua conta</div>
 
                 <!-- Início do formulário -->
-                <form action="#">
+                <form action="#" id="form">
                     <div class="user-details">
 
                         <!-- Início do campo Nome -->
@@ -61,14 +61,14 @@
 
                         <!-- Início do campo CPF -->
                         <div class="input-field">
-                            <input type="text" name="cpf" minlength="11" maxlength="11" id="cpf" placeholder="CPF (XXX.XXX.XXX-XX)" required>
+                            <input type="text" name="cpf" autocomplete="off" maxlength="14" id="cpf" placeholder="CPF" required>
                             <div class="underline"></div>
                         </div>
                         <!-- Final do campo CPF -->
 
                         <!-- Início do campo Telefone -->
                         <div class="input-field">
-                            <input type="tel" name="phone" id="phone" placeholder="Telefone Celular (XX-XXXXXXXXX)" required>
+                            <input type="tel" name="phone" autocomplete="off" id="phone" placeholder="Telefone Celular (XX-XXXXXXXXX)" required>
                             <div class="underline"></div>
                         </div>
                         <!-- Final do campo Telefone -->
@@ -89,7 +89,7 @@
 
                         <!-- Início do campo Renda -->
                         <div class="input-field">
-                            <input type="number" name="renda" id="renda" placeholder="Renda R$" required>
+                            <input type="text" name="renda" id="renda" placeholder="Renda R$" required>
                             <div class="underline"></div>
                         </div>
                         <!-- Final do campo Renda -->
@@ -146,5 +146,9 @@
         <!--**************************************************************************************-->
         <!--                                Final do rodapé                                       -->
         <!--**************************************************************************************-->
+
+        <script src="./js/mascaras.js"></script>
+        <script src="./js/main.js"></script>
+        
     </body>
 </html>
