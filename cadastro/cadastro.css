@@ -10,12 +10,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 89.3vh;
+    min-height: 100vh;
     /*width: 100vw;*/
 }
 
 /* Trabalhando a caixa branca (container) que engloba os elementos de login */
-.container {
+.container-cadastro {
     max-width: 768px;
     width: 100%;
     background: #fff;
@@ -25,7 +25,7 @@
 }
 
 /* Trabalhando os elementos de fonte do título do container */
-.container .titulo {
+.container-titulo {
     color: #002244;
     font-weight: 600;
     font-size: 25px;
@@ -34,7 +34,7 @@
 }
 
 /* Trabalhando o sublinhado abaixo do título do container*/
-.container .titulo::before {
+.container-titulo::before {
     content: '';
     position: absolute;
     left: 0;
@@ -51,7 +51,7 @@ section form .user-details {
     justify-content: space-between;
 }
 
-section form .user-details .input-field {
+section form .user-details .container-input {
     /*border: 1px solid red;*/
     margin-bottom: 15px;
     width: 45%;
@@ -63,7 +63,97 @@ section form .user-details .input-field {
     margin-bottom: 5px;
 }*/
 
-.input-field {
+
+.container-input {
+    width: 50%;
+    position: relative;
+    height: 60px;
+    overflow: hidden;
+}
+
+.container-input input {
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    
+}
+/* Escondendo o texto do placeholder*/
+.container-input input::placeholder {
+    color: transparent;
+}
+
+.container-input label {
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    height: 2px;
+    pointer-events: none;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    color: rgba(0,0,0,0.3);
+}
+
+.container-input label::after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: -1px;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(45deg, #69BE28, #002244);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.content-name {
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.3s ease;
+}
+
+.container-input input:focus + .container-input-label .content-name, 
+.container-input input:valid + .container-input-label .content-name {
+    transform: translateY(-150%);
+    font-size: 14px;
+    color: #002244;
+}
+
+.container-input input:focus + .container-input-label::after, 
+.container-input input:valid + .container-input-label::after {
+    transform: translateX(0%);
+}
+
+.container-input.input-container--invalido {
+    margin-bottom: 0.5rem;
+}
+
+.input-container--invalido input {
+    border: 1px solid red;
+    border-radius: 7px;
+}
+
+.input-container--invalido label {
+    color: red;
+}
+
+.input-mensagem-erro {
+    display: none;
+}
+
+.input-container--invalido.input-mensagem-erro {
+    color: red;
+    display: block;
+    margin-top: 0.1rem;
+    padding-left: 0.5rem;
+}
+
+
+
+/* .input-field {
     position: relative;
 }
 
@@ -106,7 +196,7 @@ form .input-field:first-child {
 
 .input-field input::placeholder {
     color: rgba(0,0,0,0.5);
-}
+} */
 
 form input[type="submit"] {
     width: 100%;

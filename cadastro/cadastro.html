@@ -44,73 +44,83 @@
         <section class="conteudo-principal">
 
             <!-- Início do container -->
-            <div class="container">   
+            <div class="container-cadastro">   
 
-                <div class="titulo">Cadastre sua conta</div>
+                <div class="container-titulo">Cadastre sua conta</div>
 
                 <!-- Início do formulário -->
-                <form action="#" id="form">
+                <form action="#" id="formulario">
                     <div class="user-details">
 
                         <!-- Início do campo Nome -->
-                        <div class="input-field">
-                            <input type="text" minlength="10" maxlength="225" name="nome" id="nome" placeholder="Nome Completo" required>
-                            <div class="underline"></div>
+                        <div class="container-input">
+                            <input type="text" minlength="10" maxlength="225" name="nome" autocomplete="off" id="nome" placeholder="Nome Completo" data-tipo="nome" required>
+                            <label class="container-input-label" for="nome"><span class="content-name">Nome Completo</span></label>
+                            <span class="input-mensagem-erro">Este campo não está válido.</span> 
                         </div>
                         <!-- Final do campo do nome -->
 
                         <!-- Início do campo CPF -->
-                        <div class="input-field">
+                        <div class="container-input">
                             <input type="text" name="cpf" autocomplete="off" maxlength="14" id="cpf" placeholder="CPF" required>
-                            <div class="underline"></div>
+                            <label class="container-input-label" for="cpf"><span class="content-name">CPF</span></label>
+
                         </div>
                         <!-- Final do campo CPF -->
 
                         <!-- Início do campo Telefone -->
-                        <div class="input-field">
-                            <input type="tel" name="phone" autocomplete="off" id="phone" placeholder="Telefone Celular (XX-XXXXXXXXX)" required>
-                            <div class="underline"></div>
+                        <div class="container-input">
+                            <input type="tel" name="phone" autocomplete="off" maxlength="14" id="phone" placeholder="Telefone Celular (XX-XXXXXXXXX)" required>
+                            <label class="container-input-label" for="phone"><span class="content-name">Telefone</span></label>
+                            
                         </div>
                         <!-- Final do campo Telefone -->
 
                         <!-- Início do campo Endereço -->
-                        <div class="input-field">
-                            <input type="text" name="endereco" id="endereco" placeholder="Endereço" required>
-                            <div class="underline"></div>
+                        <div class="container-input">
+                            <input type="text" name="endereco" autocomplete="off" id="endereco" placeholder="Endereço" required>
+                            <label class="container-input-label" for="endereco"><span class="content-name">Endereço</span></label>
+                            
                         </div>
                         <!-- Final do campo Endereço -->
 
                         <!-- Início do campo Profissão -->
-                        <div class="input-field">
-                            <input type="text" name="profisssao" id="profissao" placeholder="Profissão" required>
-                            <div class="underline"></div>
+                        <div class="container-input">
+                            <input type="text" name="profissao" autocomplete="off" id="profissao" placeholder="Profissão" required>
+                            <label class="container-input-label" for="profissao"><span class="content-name">Profissão</span></label>
+                            
                         </div>
                         <!-- Final do campo Profissão -->
 
                         <!-- Início do campo Renda -->
-                        <div class="input-field">
-                            <input type="text" name="renda" id="renda" placeholder="Renda R$" required>
-                            <div class="underline"></div>
+                        <div class="container-input">
+                            <input type="text" name="renda" autocomplete="off" id="renda" placeholder="Renda R$" required>
+                            <label class="container-input-label" for="renda"><span class="content-name">Renda</span></label>
+                            
                         </div>
                         <!-- Final do campo Renda -->
 
                         <!-- Início do campo Email -->
-                        <div class="input-field">
-                            <input type="email" name="email" id="email" placeholder="Email" required>
-                            <div class="underline"></div>
+                        <div class="container-input">
+                            <input type="email" name="email" autocomplete="off" id="email" placeholder="Email" required>
+                            <label class="container-input-label" for="email"><span class="content-name">Email</span></label>
+                            
                         </div>
                         <!-- Final do campo Email -->
 
                         <!-- Início do campo Senha -->
-                        <div class="input-field">
-                            <input type="password" name="senha" id="senha" placeholder="Senha" required>
-                            <div class="underline"></div>
+                        <div class="container-input">
+                            <input type="password" name="senha" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[ !@#$%^&*_=+-]).{6,12}$" autocomplete="off" id="senha" placeholder="Senha" required>
+                            <label class="container-input-label" for="senha"><span class="content-name">Senha</span></label>
+                            
                         </div>
                         <!-- Final do campo senha -->
 
                         <!-- Botão para enviar o formulário -->
                         <input type="submit" value="Cadastar">
                     </div>
+
+                    <p id="log"></p>
 
                 </form>
                 <!-- Final do formulário -->
@@ -148,7 +158,7 @@
         <!--**************************************************************************************-->
 
         <script src="./js/mascaras.js"></script>
-        <script src="./js/main.js"></script>
+        <script src="./js/app.js" type="module"></script>
         
     </body>
 </html>
