@@ -7,35 +7,56 @@ export function valida(input) {
     // }
 
     if(input.validity.valid) {
-        input.parentElement.classList.remove('input-container--invalido')
-        input.parentElement.querySelector('.input-mensagem-erro').innerHTML = ''
+        input.parentElement.classList.remove('container-input--invalido')
+        input.parentElement.querySelector('.container-input-mensagem-erro').innerHTML = ''
     } else {
-        input.parentElement.classList.add('input-container--invalido')
-        input.parentElement.querySelector('.input-mensagem-erro').innerHTML = mostraMensagemDeErro(tipoDeInput, input)
+        input.parentElement.classList.add('container-input--invalido')
+        input.parentElement.querySelector('.container-input-mensagem-erro').innerHTML = mostraMensagemDeErro(tipoDeInput, input)
     }
 }
 
-// const tiposDeErro = [
-//     'valueMissing',
+const tiposDeErro = [
+    'valueMissing',
 //     'typeMismatch',
 //     'patternMismatch',
 //     'customError'
-// ]
+]
 
-// const mensagensDeErro = {
-//     nome: {
-//         valueMissing: 'O campo de nome não pode estar vazio.'
-//     }
-// }   
+ const mensagensDeErro = {
+    nome: {
+        valueMissing: 'Preencha este campo.'
+    },
+    cpf: {
+        valueMissing: 'CPF inválido.'
+    },
+    phone: {
+        valueMissing: 'Preencha este campo.'
+    },
+    endereco: {
+        valueMissing: 'Preencha este campo.'
+    },
+    profissao: {
+        valueMissing: 'Preencha este campo.'
+    },
+    renda: {
+        valueMissing: 'Preencha este campo.'
+    },
+    email: {
+        valueMissing: 'Preencha este campo.'
+    },
+    senha: {
+        valueMissing: 'Preencha este campo.'
+    }
+}   
 
 
-// function mostraMensagemDeErro(tipoDeInput, input) {
-//     let mensagem = ''
-//     tiposDeErro.forEach(erro => {
-//         if(input.validity[erro]) {
-//             mensagem = mensagensDeErro[tipoDeInput][erro]
-//         }
-//     })
+function mostraMensagemDeErro(tipoDeInput, input) {
+    let mensagem = ''
+    tiposDeErro.forEach(erro => {
+        if(input.validity[erro]) {
+            mensagem = mensagensDeErro[tipoDeInput][erro]
+        }
+    })
     
-//     return mensagem
-// }
+    return mensagem
+}
