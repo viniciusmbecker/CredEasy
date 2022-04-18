@@ -1,0 +1,261 @@
+:root {
+    --cor-background: #69BE28;
+    --cor-icones: #002244;
+    --cor-ativo: #fff;
+    --cor-fundo-sidebar: #A5ACAF;
+    --cor-estado-hover: #000;
+    --cor-fundo-mensagem: #FF6961;
+    --cor-numero-mensagem: #000;
+    --color-primary: #7380ec;
+    --color-danger: #ff7782;
+    --color-sucess: #41f1b6;
+    --color-warning: #ffbb55;
+    --color-white: #fff;
+    --color-info-dark: #7d8da1;
+    --color--info-light: #dce1eb;
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-primary-variant: #111e88;
+    --color-dark-variant: #677483;
+    --color-background: #f6f6f9;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+
+}
+
+*{
+    outline: 0;
+    appearance: none;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-size: 0.88rem;
+    background: var(--cor-background);
+    user-select: none;
+    overflow-x: hidden;
+    /*color: var(--color-dark);*/
+}
+
+.container {
+    display: grid;
+    width: 96%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto;
+    /*23rem*/
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+aside {
+    height: 100vh;
+
+}
+
+aside .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+}
+
+aside .user {
+    display: flex;
+    gap: 0.8rem;
+}
+
+aside .user img {
+    width: 2rem;
+    height: 2rem;
+}
+
+aside .close {
+    display: none;
+}
+
+/* ------------------------------------------------------------------------------------------------------
+-------------------------------------------------- SIDEBAR ----------------------------------------------
+------------------------------------------------------------------------------------------------------ */
+
+aside .sidebar {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    position: relative;
+    top: 3rem;
+}
+
+aside h3 {
+    font-weight: 500;
+
+} 
+
+aside .sidebar a {
+    display: flex;
+    color: var(--cor-icones);
+    margin-left: 2rem;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 3.7rem;
+    transition: all .3s ease;
+
+}
+
+aside .sidebar a span {
+    font-size: 1.6rem;
+    transition: all 0.3s ease;
+
+}
+
+aside .sidebar a:last-child {
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+
+}
+
+aside .sidebar a.active {
+    background: var(--cor-fundo-sidebar);
+    color: var(--cor-ativo);
+    margin-left: 0;
+}
+
+aside .sidebar a.active:before {
+   content: '';
+   width: 6px;
+   height: 100%;
+   background: var(--cor-icones); 
+}
+
+aside .sidebar a.active span {
+   color: var(--cor-ativo);
+   margin-left: calc(1rem - 6px); 
+
+}
+
+aside .sidebar a:hover {
+   color: var(--cor-estado-hover);
+
+}
+
+aside .sidebar a:hover span {
+    margin-left: 1rem;
+}
+
+aside .sidebar .message-count {
+    background: var(--cor-fundo-mensagem);    
+    color: var(--cor-numero-mensagem);
+    padding: 2px 10px;
+    font-size: 11px;
+    /*border-radius: var(--border-radius-1);*/
+}
+
+main {
+    margin-top: 1.4rem;
+
+}
+
+main .dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+
+}
+
+main .dashboard > div {
+    background: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
+
+}
+
+main .dashboard > div:hover {
+    box-shadow: none;
+}
+
+main .dashboard > div span {
+    background: var(--color-primary);
+    padding: 0.5rem;
+    border-radius: 50%;
+    color: var(--color-white);
+    font-size: 2rem;
+
+}
+
+main .dashboard h3 {
+    margin: 1rem 0 0.6rem;
+    font-size: 1rem;
+
+}
+
+main .dashboard .progress {
+    position: relative;
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+
+}
+
+main .historico {
+    margin-top: 2rem;
+}
+
+main .historico h2{
+    margin-bottom: 0.8rem;
+}
+
+
+main .historico table{
+    background: var(--color-white);
+    width: 100%;
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: all .3s ease;
+
+}
+
+main .historico table:hover {
+    box-shadow: none;
+
+}
+
+main table tbody td {
+    height: 2.8rem;
+    border-bottom: 1px solid var(--color-light);
+    color: var(--color-dark-variant);
+
+}
+
+main table tbody tr:last-child td {
+    border: none;
+}
+
+main .historico a {
+    text-align: center;
+    display: block;
+    margin: 1rem auto;
+    color: var(--color-primary);
+
+}
+

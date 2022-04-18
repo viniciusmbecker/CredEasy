@@ -1,35 +1,64 @@
 
 // Máscara para o CPF
-const inputCPF = document.querySelector('input#cpf')
+const inputCPF = document.querySelector('input#cpf');
 
-inputCPF.addEventListener('keypress', () => {
+inputCPF.addEventListener('keypress', (evento) => {
     
+    // verificando se o valor digitado pelo usuário é uma letra
+    let valorDigitado = evento.key;
+
+    if (isNaN(valorDigitado)) {
+
+        evento.preventDefault()
+
+    }
+
     // comprimento = 14 dígitos
-    let inputLength = inputCPF.value.length
+    let inputLength = inputCPF.value.length;
 
     // três dígitos . três digitos . três dígitos - dois dígitos
-    if (inputLength == 3 || inputLength == 7) {
+    if (inputLength === 3 || inputLength === 7) {
+
         inputCPF.value += '.'
-    }else if (inputLength == 11) {
+
+    }else if (inputLength === 11) {
+
         inputCPF.value += '-'
+
     }
 
-})
+});
 
 // Máscara para o Telefone
-const inputTelefone = document.querySelector('input#phone')
+const inputTelefone = document.querySelector('input#phone');
 
-inputTelefone.addEventListener('keypress', () => {
+inputTelefone.addEventListener('keypress', (evento) => {
     
-    // comprimento = 13 dígitos
+    // verificando se o valor digitado pelo usuário é uma letra
+    let valorDigitado = evento.key;
+
+    if (isNaN(valorDigitado)) {
+
+        evento.preventDefault();
+
+    }
+    
+    // comprimento = 14 dígitos
     let inputLength = inputTelefone.value.length
 
+    // ( dois dígitos ) cinco dígitos - quatro dígitos
     if(inputLength == 0) {
+
         inputTelefone.value += '('
+
     } else if(inputLength == 3) {
+
         inputTelefone.value += ')'
+
     } else if(inputLength == 9) {
+        
         inputTelefone.value += '-'
+
     }
 
- })
+ });

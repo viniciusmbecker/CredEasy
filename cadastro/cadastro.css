@@ -63,7 +63,7 @@ section form .user-details .container-input {
 
 .container-input {
     /*border: 1px solid red;*/
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     position: relative;
 }
 
@@ -83,15 +83,23 @@ section form .user-details .container-input {
     left: 5px;
     transition: .4s;
     color: rgba(0,0,0,0.3);
+    font-size: 18px;
 }
 
-input:focus ~ label,
-input:valid ~ label {
-    transform: translateY(-20px);
+.container-input input::placeholder {
+    color: transparent;
+}
+
+.container-input input:focus ~ label,
+.container-input input:not(:placeholder-shown) ~ label {
+    transform: translateY(-18px);
     font-size: 0.8em;
-    letter-spacing: 1px;
     color: #002244;
-    font-weight: 500;
+    font-weight: 600;
+}
+
+.container-input input:focus {
+    border-bottom: 1px solid #69BE28;
 }
 
 

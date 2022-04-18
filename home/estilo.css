@@ -69,15 +69,34 @@ body {
     margin-right: 8px;
 }
 
-.pesquisa input {
-    padding: 5px;
-    font-size: 16px;
-    border-radius: 5px;
-    background-color: #A5ACAF;
+#pesquisa {
+    display: flex;
+    align-items: center;
+    border-radius: 55px;
+    padding: 4px;
 }
 
-.pesquisa input:focus {
+#pesquisa img {
+    margin-right: 5px;
+    height: 30px;    
+}
+
+#pesquisa input {
+    font-size: 16px;
+    width: 0px;
+    border-radius: 5px;
+    border: none;
+    background-color: #A5ACAF;
+    transition: 1s;
+    padding: 5px 0px;
+}
+
+#pesquisa input:focus {
     outline: 1.5px solid #69BE28;
+}
+
+#texto-pesquisa.expandido {
+    width: 250px;
 }
 
 /*.cabecalho-menu-botao {

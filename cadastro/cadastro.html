@@ -25,7 +25,8 @@
                 </nav>
                 
                 <div class="cabecalho-pesquisa">
-                    <div class="pesquisa">
+                    <div id="pesquisa">
+                        <img src="../img/icon.svg" alt="" id="lupa">
                         <input id="texto-pesquisa" type="text" placeholder="Pesquisar...">
                     </div>
                     <div><a class="botao-entrar" href="/login/login.html">Entrar</a></div>  
@@ -54,65 +55,65 @@
 
                         <!-- Início do campo Nome -->
                         <div class="container-input">
-                            <input type="text" minlength="10" maxlength="225" name="nome" autocomplete="off" id="nome" data-tipo="nome" required>
+                            <input type="text" minlength="2" maxlength="225" name="nome" autocomplete="off" id="nome" data-tipo="nome" placeholder="Nome Completo" required>
                             <label class="container-input-label" for="nome">Nome Completo</label>
-                            <span class="container-input-mensagem-erro">Preencha este campo.</span> 
+                            <span class="container-input-mensagem-erro"></span> 
                         </div>
                         <!-- Final do campo do nome -->
 
                         <!-- Início do campo CPF -->
                         <div class="container-input">
-                            <input type="text" name="cpf" autocomplete="off" minlength="14" maxlength="14" id="cpf" data-tipo="cpf" required>
+                            <input type="text" name="cpf" autocomplete="off" minlength="14" maxlength="14" id="cpf" data-tipo="cpf" placeholder="CPF" required>
                             <label class="container-input-label" for="cpf">CPF</label>
-                            <span class="container-input-mensagem-erro">Preencha este campo.</span>
+                            <span class="container-input-mensagem-erro"></span>
                         </div>
                         <!-- Final do campo CPF -->
 
                         <!-- Início do campo Telefone -->
                         <div class="container-input">
-                            <input type="tel" name="phone" autocomplete="off" maxlength="14" id="phone" data-tipo="phone" required>
+                            <input type="tel" name="phone" autocomplete="off" minlength="14" maxlength="14" id="phone" data-tipo="phone" placeholder="Telefone" required>
                             <label class="container-input-label" for="phone">Telefone</label>
-                            <span class="container-input-mensagem-erro">Preencha este campo.</span>
+                            <span class="container-input-mensagem-erro"></span>
                         </div>
                         <!-- Final do campo Telefone -->
 
                         <!-- Início do campo Endereço -->
                         <div class="container-input">
-                            <input type="text" name="endereco" autocomplete="off" id="endereco" data-tipo="endereco" required>
+                            <input type="text" name="endereco" autocomplete="off" id="endereco" data-tipo="endereco" placeholder="Endereço" required>
                             <label class="container-input-label" for="endereco">Endereço</label>
-                            <span class="container-input-mensagem-erro">Preencha este campo.</span>
+                            <span class="container-input-mensagem-erro"></span>
                         </div>
                         <!-- Final do campo Endereço -->
 
                         <!-- Início do campo Profissão -->
                         <div class="container-input">
-                            <input type="text" name="profissao" autocomplete="off" id="profissao" data-tipo="profissao" required>
+                            <input type="text" name="profissao" autocomplete="off" id="profissao" data-tipo="profissao" placeholder="Profissão" required>
                             <label class="container-input-label" for="profissao">Profissão</label>
-                            <span class="container-input-mensagem-erro">Preencha este campo.</span>
+                            <span class="container-input-mensagem-erro"></span>
                         </div>
                         <!-- Final do campo Profissão -->
 
                         <!-- Início do campo Renda -->
                         <div class="container-input">
-                            <input type="text" name="renda" autocomplete="off" id="renda" data-tipo="renda" required>
+                            <input type="text" name="renda" autocomplete="off" id="renda" data-tipo="renda" placeholder="Renda" required>
                             <label class="container-input-label" for="renda">Renda</label>
-                            <span class="container-input-mensagem-erro">Preencha este campo.</span>
+                            <span class="container-input-mensagem-erro"></span>
                         </div>
                         <!-- Final do campo Renda -->
 
                         <!-- Início do campo Email -->
                         <div class="container-input">
-                            <input type="email" name="email" autocomplete="off" id="email" data-tipo="email" required>
+                            <input type="email" name="email" autocomplete="off" id="email" data-tipo="email" placeholder="Email" required>
                             <label class="container-input-label" for="email">Email</label>
-                            <span class="container-input-mensagem-erro">Preencha este campo.</span>
+                            <span class="container-input-mensagem-erro"></span>
                         </div>
                         <!-- Final do campo Email -->
 
                         <!-- Início do campo Senha -->
                         <div class="container-input">
-                            <input type="password" name="senha" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[ !@#$%^&*_=+-]).{6,12}$" autocomplete="off" id="senha" data-tipo="senha" required>
+                            <input type="password" name="senha" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[ !@#$%^&*_=+-]).{6,12}$" autocomplete="off" id="senha" data-tipo="senha" placeholder="Senha" required>
                             <label class="container-input-label" for="senha">Senha</label>
-                            <span class="container-input-mensagem-erro">Preencha este campo.</span>
+                            <span class="container-input-mensagem-erro"></span>
                         </div>
                         <!-- Final do campo senha -->
 
@@ -159,6 +160,7 @@
 
         <script src="./js/mascaras.js"></script>
         <script src="./js/app.js" type="module"></script>
-        
+        <script src="../home/js/barra-de-pesquisa.js"></script>
+        <script src="https://github.com/codermarcos/simple-mask-money/releases/download/v3.0.0/simple-mask-money.js"></script>
     </body>
 </html>
