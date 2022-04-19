@@ -4,30 +4,13 @@
     --cor-ativo: #fff;
     --cor-fundo-sidebar: #A5ACAF;
     --cor-estado-hover: #000;
-    --cor-fundo-mensagem: #FF6961;
-    --cor-numero-mensagem: #000;
-    --color-primary: #7380ec;
-    --color-danger: #ff7782;
-    --color-sucess: #41f1b6;
-    --color-warning: #ffbb55;
-    --color-white: #fff;
-    --color-info-dark: #7d8da1;
-    --color--info-light: #dce1eb;
-    --color-dark: #363949;
-    --color-light: rgba(132, 139, 200, 0.18);
-    --color-primary-variant: #111e88;
-    --color-dark-variant: #677483;
-    --color-background: #f6f6f9;
-
-    --card-border-radius: 2rem;
-    --border-radius-1: 0.4rem;
-    --border-radius-2: 0.8rem;
-    --border-radius-3: 1.2rem;
-
-    --card-padding: 1.8rem;
-    --padding-1: 1.2rem;
-
-    --box-shadow: 0 2rem 3rem var(--color-light);
+    --cor-fundo-card: #fff;
+    --cor-icone-card: #fff;
+    --cor-fundo-icone-card: #7380ec;
+    --cor-fundo-tabela: #fff;
+    --cor-linha-tabela: rgba(132, 139, 200, 0.3);
+    --cor-iten-tabela: #677483;
+    --cor-detalhes: #7380ec;
 
 }
 
@@ -39,49 +22,46 @@
 }
 
 body {
-    font-size: 0.88rem;
+    font-size: 0.9rem;
     background: var(--cor-background);
-    user-select: none;
-    overflow-x: hidden;
-    /*color: var(--color-dark);*/
 }
 
-.container {
+.conteudo-da-pagina {
     display: grid;
     width: 96%;
     margin: 0 auto;
     gap: 1.8rem;
     grid-template-columns: 14rem auto;
-    /*23rem*/
 }
+
+
+/* ------------------------------------------------------------------------------------------------------
+-------------------------------------------------- SIDEBAR ----------------------------------------------
+------------------------------------------------------------------------------------------------------ */
 
 aside {
     height: 100vh;
 
 }
 
-aside .top {
+aside h3 {
+    font-weight: 500;
+}    
+
+aside .topo {
+    background: #fff;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 1.4rem;
 }
 
-aside .user {
+aside .usuario {
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 0.8rem;
 }
-
-aside .user img {
-    width: 2rem;
-    height: 2rem;
-}
-
-aside .close {
-    display: none;
-}
-
-/*  Sidebar  */
 
 aside .sidebar {
     background: white;
@@ -91,11 +71,6 @@ aside .sidebar {
     position: relative;
     top: 3rem;
 }
-
-aside h3 {
-    font-weight: 500;
-
-} 
 
 aside .sidebar a {
     display: flex;
@@ -122,22 +97,21 @@ aside .sidebar a:last-child {
 
 }
 
-aside .sidebar a.active {
+aside .sidebar a.ativo {
     background: var(--cor-fundo-sidebar);
     color: var(--cor-ativo);
     margin-left: 0;
 }
 
-aside .sidebar a.active:before {
+aside .sidebar a.ativo:before {
    content: '';
    width: 6px;
    height: 100%;
    background: var(--cor-icones); 
 }
 
-aside .sidebar a.active span {
+aside .sidebar a.ativo span {
    color: var(--cor-ativo);
-   margin-left: calc(1rem - 6px); 
 
 }
 
@@ -150,13 +124,9 @@ aside .sidebar a:hover span {
     margin-left: 1rem;
 }
 
-aside .sidebar .message-count {
-    background: var(--cor-fundo-mensagem);    
-    color: var(--cor-numero-mensagem);
-    padding: 2px 10px;
-    font-size: 11px;
-    /*border-radius: var(--border-radius-1);*/
-}
+/* ------------------------------------------------------------------------------------------------------
+------------------------------------------------ DASHBOARD ----------------------------------------------
+------------------------------------------------------------------------------------------------------ */
 
 main {
     margin-top: 1.4rem;
@@ -171,39 +141,20 @@ main .dashboard {
 }
 
 main .dashboard > div {
-    background: var(--color-white);
-    padding: var(--card-padding);
-    border-radius: var(--card-border-radius);
+    background: var(--cor-fundo-card);
+    padding: 1.8rem;
+    border-radius: 2rem;
     margin-top: 1rem;
-    box-shadow: var(--box-shadow);
     transition: all 0.3s ease;
 
 }
 
-main .dashboard > div:hover {
-    box-shadow: none;
-}
-
 main .dashboard > div span {
-    background: var(--color-primary);
+    background: var(--cor-fundo-icone-card);
     padding: 0.5rem;
     border-radius: 50%;
-    color: var(--color-white);
+    color: var(--cor-icone-card);
     font-size: 2rem;
-
-}
-
-main .dashboard h3 {
-    margin: 1rem 0 0.6rem;
-    font-size: 1rem;
-
-}
-
-main .dashboard .progress {
-    position: relative;
-    width: 92px;
-    height: 92px;
-    border-radius: 50%;
 
 }
 
@@ -215,39 +166,24 @@ main .historico h2{
     margin-bottom: 0.8rem;
 }
 
-
 main .historico table{
-    background: var(--color-white);
+    background: var(--cor-fundo-tabela);
     width: 100%;
-    border-radius: var(--card-border-radius);
-    padding: var(--card-padding);
+    border-radius: 2rem;
+    padding: 1.8rem;
     text-align: center;
-    box-shadow: var(--box-shadow);
     transition: all .3s ease;
-
-}
-
-main .historico table:hover {
-    box-shadow: none;
 
 }
 
 main table tbody td {
     height: 2.8rem;
-    border-bottom: 1px solid var(--color-light);
-    color: var(--color-dark-variant);
+    border-bottom: 1px solid var(--cor-linha-tabela);
+    color: var(--cor-iten-tabela);
 
 }
 
-main table tbody tr:last-child td {
-    border: none;
-}
-
-main .historico a {
-    text-align: center;
-    display: block;
-    margin: 1rem auto;
-    color: var(--color-primary);
-
+main .detalhes {
+    color: var(--cor-detalhes);
 }
 
