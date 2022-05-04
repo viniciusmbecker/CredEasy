@@ -1,98 +1,428 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="/home/estilo.css">
+        <link rel="icon" type="image/x-icon" href="../assets/img/logo.png">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+
+        <!-- Estilo Customizado -->
+        <link rel="stylesheet" type="text/css" href="/home/novo-estilo.css">
+        
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
         <title>CredEasy</title>
     </head>
     
-    <body>
+    <body data-bs-spy="scroll" data-bs-target=".navbar" id="home">
+
         <!--**************************************************************************************-->
         <!--                               Início do cabeçalho                                    -->
         <!--**************************************************************************************-->
-        <header>
-            <div class="cabecalho">       
-                <nav class="cabecalho-menu">
-                    <h1>CredEasy</h1>
-                    <a href="#">Home</a>
-                    <a href="#">Sobre</a>
-                    <a href="#">Produtos</a>
-                    <a href="#">Contato</a>
-                </nav>
 
-                <div class="cabecalho-pesquisa">
-                    <div id="pesquisa">
-                        <img src="../img/icon.svg" alt="Lupa da barra de pesquisa presente no menu" id="lupa">
-                        <input id="texto-pesquisa" type="text" placeholder="Pesquisar...">
-                    </div> 
-                    <div><a class="botao-entrar" href="/login/login.html">Entrar</a></div>  
-                    <a class="botao-cadastrar" href="/cadastro/cadastro.html">Cadastrar</a>     
-                
+        <header>
+
+            <nav class="navbar navbar-expand-lg fixed-top">
+                <div class="container">
+                    
+                    <a href="#" class="">
+                        <img src="../assets/img/CredEasy2.png" width="220">
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a href="#home" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#sobre" class="nav-link">Sobre</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#produtos" class="nav-link">Crédito</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#contato" class="nav-link">Contato</a>
+                            </li>
+                        </ul>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <form class="form-inline" id="pesquisa">
+                                <img class="m-0" src="../assets/img/icon.svg" alt="Lupa da barra de pesquisa presente no menu" id="lupa">
+                                <input type="text" id="texto-pesquisa" placeholder="Pesquisar">
+                            </form>
+                            <li class="nav-item">
+                                <a href="../login/login.html" class="btn ml-0 ml-lg-2 cor-btn-nav" role="button">Entrar</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../cadastro/cadastro.html" class="btn ml-0 ml-lg-2 cor-btn-nav" role="button">Cadastrar</a>
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
                 </div>
-                <!-- Final da barra de navegação -->
-            </div>    
+            </nav>    
         </header>
+
         <!--**************************************************************************************-->
         <!--                                Final do cabeçalho                                    -->
         <!--**************************************************************************************-->
  
 
         <!--**************************************************************************************-->
-        <!--                            Início do container                                       -->
+        <!--                            Início da seção home                                       -->
         <!--**************************************************************************************-->
-        <main class="container">
         
-            <!-- Início do conteúdo principal -->
-            <section class="conteudo-principal">
+        <section id="home2"  class="home2-background">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 d-flex">
+                        <div class="align-self-center">
+                            <h1 class="display-4">Precisando de dinheiro?</h1>
+                            <p>
+                                O seu orçamento está apertado? Nós temos a melhor solução para você.
+                            </p>
 
-                <!-- Início dos textos do conteúdo principal -->
-                <div class="conteudo-principal-escrito">
+                            <form class="mt-4 mb-4" action="#">
+                                <div class="input-group input-group-lg">
+                                    <input type="text" placeholder="Seu email" class="form-control">
+                                    <button type="submit" class="btn btn-dark cor-btn btn-sm">Cadastrar</button>
+                                </div>
+                            </form>
 
-                    <!-- Título do conteúdo principal -->
-                    <h1 class="conteudo-principal-escrito-titulo">
-                        Precisando de dinheiro?</h1>
-
-                    <!-- Parágrafo do conteúdo principal-->
-                    <p class="conteudo-principal-escrito-paragrafo">
-                        O seu orçamento está apertado? Nós temos a melhor 
-                        solução para você.
-                    </p>
-                    <div class="formulario">
-                        <input type="text" name="Email" placeholder="Seu email">
-                        <a id="botao-cadastrar-principal" href="/cadastro/cadastro.html">Cadastrar</a>
-                    </div>    
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-none d-md-block">
+                        <img class="mw-100" src="../assets/img/mulher-segurando-moeda.png">
+                    </div>
                 </div>
-                <!-- Final dos textos do conteúdo principal -->
+            </div>
+        </section>
 
-                <!-- Início da imagem do conteúdo pricipal -->
-                <div class="conteudo-principal-imagem">
-                    <img src="../img/mulher-segurando-moeda.png" alt="Mulher segurando uma moeda de um real">
-                </div>
-                <!-- Final da imagem do conteúdo principal -->
-            </section>
-            <!-- Final do conteúdo principal -->
-        </main>
         <!--**************************************************************************************-->
-        <!--                             Final do container                                       -->
+        <!--                             Final da seção home                                       -->
         <!--**************************************************************************************-->
 
 
+        <!--**************************************************************************************-->
+        <!--                             Início da seção sobre                                    -->
+        <!--**************************************************************************************-->
+
+        <section id="sobre" class="bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 section-intro">
+                      <h1>Prazer, somos a CredEasy</h1>
+                      <p>A plataforma de crédito mais completa do Brasil.
+                      </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 d-flex">
+                        <div class="align-self-center">
+                            <h2 class="text-center">Mais de 10 anos de experiência</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="text-center">Somos a CredEasy, e escolhemos trilhar um caminho coletivo para oferecer soluções
+                        inteligentes para o seu desenvolvimento financeiro. A gente entende que as melhores 
+                        escolhas são aquelas que trazem resultados para todos. Oferecemos produtos e serviços
+                        financeiros de um jeito simples e próximo para você, para a sua empresa ou para o seu
+                        agronegócio.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container mt-5">   
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2 class="text-center">Nossos Números</h2>
+                        <p class="text-center">Temos mais de 1 milhão de clientes e estamos presentes em todo o Brasil, com mais
+                        de 500 agências, além de estarmos presentes no meio digital. Com uma plataforma moderna
+                        e segura, você pode contratar nossos serviços a partir de um simples clique.  
+                        Temos mais de 2 mil colaboradores e pelo 2º ano consecutivo, ficamos entre as Melhores
+                        Empresas para Você Trabalhar, segundo a revista Você S/A. E pelo quarto ano consecutivo, 
+                        figuramos no ranking Melhores & Maiores da revista Exame.</p>
+                    </div>
+                    <div class="col-md-6 d-flex">
+                        <div class="row">
+                                <div class="row align-self-center">
+                                    <div class="col-lg-6 col-sm-6 p-3 numeros">
+                                        <h1 class="mb-0">5,6</h1>
+                                        <p class="mb-0 fw-bold">bilhões</p>
+                                        <small class="fst-italic">patrimônio líquido</small>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-6 p-3 numeros">
+                                        <h1 class="mb-0">10,5</h1>
+                                        <p class="mb-0 fw-bold">bilhões</p>
+                                        <small class="fst-italic">ativos</small>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-6 p-3 numeros">
+                                        <h1 class="mb-0">136,4</h1>
+                                        <p class="mb-0 fw-bold">bilhões</p>
+                                        <small class="fst-italic">saldo em carteira de crédito</small>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-6 p-3 numeros">
+                                        <h1 class="mb-0">131,2</h1>
+                                        <p class="mb-0 fw-bold">bilhões</p>
+                                        <small class="fst-italic">depósitos totais</small>
+                                    </div>
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+              
+        <!--**************************************************************************************-->
+        <!--                              Final da seção sobre                                    -->
+        <!--**************************************************************************************-->
+
+
+        <!--**************************************************************************************-->
+        <!--                            Início da seção produtos                                  -->
+        <!--**************************************************************************************-->
+
+        <section id="produtos" class="border-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 section-intro">
+                        <h2>Linhas de crédito para você</h2>
+                    </div>
+                </div>
+            
+                <div class="row gy-4 bg-light">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service custom-card">
+                            <div class="icon-box">
+                                <img src="" class="card-imagem-top card-imagem-posicao" alt="">
+                            </div>
+                            <h5>Crédito Pessoal</h5>
+                            <p>Com esta modalidade de crédito você pode pagar suas contas, antecipar planos e 
+                                realizar seus sonhos.</p>
+                            <a href="#" class="btn botao-cor-especial">Saiba mais</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service custom-card">
+                            <div class="icon-box">
+                                <img src="" class="card-imagem-top card-imagem-posicao" alt="">
+                            </div>
+                            <h5>Crédito Imobiliário</h5>
+                            <p>Com esta modalidade de crédito, você consegue adquirir o seu tão sonhado imóvel residencial próprio.</p>
+                            <a href="#" class="btn botao-cor-especial">Saiba mais</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service custom-card">
+                            <div class="icon-box">
+                                <img src="" class="card-imagem-top card-imagem-posicao" alt="">
+                            </div>
+                            <h5>Construção e Reforma</h5>
+                            <p>Linha de crédito destinada a aquisição de materiais de construção e pagamento de mão-de-obra 
+                                para construir ou reformar seu imóvel.</p>
+                            <a href="#" class="btn botao-cor-especial">Saiba mais</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service custom-card">
+                            <div class="icon-box">
+                                <img src="" class="card-imagem-top card-imagem-posicao" alt="">
+                            </div>
+                            <h5>Crédito Turismo</h5>
+                            <p>Com esta linha de crédito, você pode realizar aquela sua tão sonhada viagem, seja ela nacional ou internacional.</p>
+                            <a href="#" class="btn botao-cor-especial">Saiba mais</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service custom-card">
+                            <div class="icon-box">
+                                <img src="" class="card-imagem-top card-imagem-posicao" alt="">
+                            </div>
+                            <h5>Crédito para Energia Solar</h5>
+                            <p>Com esta linha de crédito, você consegue adquirir a tecnologia para utilização de uma fonte de energia renovável
+                                 em sua residência.</p>
+                            <a href="#" class="btn botao-cor-especial">Saiba mais</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service custom-card">
+                            <div class="icon-box">
+                                <img src="" class="card-imagem-top card-imagem-posicao" alt="">
+                            </div>
+                            <h5>Crédito para Automóveis</h5>
+                            <p>A partir desta linha de crédito, você poderá realizar a aquisição de veículos automotores novos e usados, nacionais
+                                 ou importados.</p>
+                            <a href="#" class="btn botao-cor-especial">Saiba mais</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service custom-card">
+                            <div class="icon-box">
+                                <img src="" class="card-imagem-top card-imagem-posicao" alt="">
+                            </div>
+                            <h5>Crédito Consignado</h5>
+                            <p>Com esta modalidade de crédito, as parcelas são deduzidas diretamente da folha de pagamento
+                                ou benefício da pessoa física.</p>
+                            <a href="#" class="btn botao-cor-especial">Saiba mais</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service custom-card">
+                            <div class="icon-box">
+                                <img src="" class="card-imagem-top card-imagem-posicao" alt="">
+                            </div>
+                            <h5>Crédito Educação</h5>
+                            <p>A partir desta modalidade de crédito, você consegue investir nos seus estudos, seja na graduação
+                                ou na pós-graduação.</p>
+                            <a href="#" class="btn botao-cor-especial">Saiba mais</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service custom-card">
+                            <div class="icon-box">
+                                <img src="" class="card-imagem-top card-imagem-posicao" alt="">
+                            </div>
+                            <h5>Crédito Agro</h5>
+                            <p>Com esta modalidade de crédito, você consegue adquirir seus implementos agrícolas, bem como 
+                                financiar sua lavoura.</p>
+                            <a href="#" class="btn botao-cor-especial">Saiba mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </section> 
+
+        <!--**************************************************************************************-->
+        <!--                            Final da seção produtos                                   -->
+        <!--**************************************************************************************-->
+
+
+                <!--**************************************************************************************-->
+        <!--                            Início da seção contato                                   -->
+        <!--**************************************************************************************-->
+
+        <section id="contato" class="border-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 section-intro">
+                        <h2>Entre em contato conosco</h2>
+                        <p>Preencha o formulário abaixo ou encontre a nossa agência mais próxima.</p>
+                    </div>
+                </div>
+                <div class="row bg-light">
+                    <div class="col-lg-7">
+                        <form action="" class="row gy-3 gx-3 p-4 plg-5">
+                            <div class="form-group col-lg-6">
+                                <input type="text" class="form-control" placeholder="Digite seu nome">
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <input type="text" class="form-control" placeholder="Digite seu sobrenome">
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <input type="email" class="form-control" placeholder="Insira seu email">
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <input type="text" class="form-control" placeholder="Descreva o assunto">
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <textarea class="form-control" rows="4" placeholder="Escreva sua mensagem"></textarea>
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <a href="#" class="btn btn-dark">Enviar Mensagem</a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-5">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13906.491048060738!2d-51.106292599999996!3d-29.381332899999997
+                        !2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1651514379931!5m2!1spt-BR!2sbr" class="mapa" style="border:0;" 
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>    
+            </div>
+        </section>
+
+        <!--**************************************************************************************-->
+        <!--                             Final da seção contato                                   -->
+        <!--**************************************************************************************-->
+                      
+        
+        
         <!--**************************************************************************************-->
         <!--                               Início do rodapé                                       -->
         <!--**************************************************************************************-->
-        <footer>
-            <p class="copyright">&copy; CredEasy - 2022</p>
+
+        <footer class="mt-5 py-4 footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 about-company">
+                        <img src="../assets/img/CredEasy2.png" width="220">
+                    </div>
+          
+                    <div class="col-6  align-self-center">
+                        <ul class="nav justify-content-around">
+                            <li class="nav-item mb-2"><a href="#home" class="nav-link p-0 links-nav-footer">Home</a></li>
+                            <li class="nav-item mb-2"><a href="#sobre" class="nav-link p-0 links-nav-footer">Sobre</a></li>
+                            <li class="nav-item mb-2"><a href="#produtos" class="nav-link p-0 links-nav-footer">Crédito</a></li>
+                            <li class="nav-item mb-2"><a href="#contato" class="nav-link p-0 links-nav-footer">Contato</a></li>
+                        </ul>
+                    </div>
+          
+                    <div class="col-3 align-items-center">
+                        <form>
+                            <p class="m-0 newsletter">Newsletter</p>
+                            <div class="d-flex justify-content-end w-80 gap-2">    
+                                <input id="newsletter1" type="text" class="form-control" placeholder="Email">
+                                <button class="btn btn-primary" type="button"><i class="fab fa-telegram-plane"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+          
+                <div class="d-flex align-items-center justify-content-between pt-4 my-4 border-top">
+                    <p class="m-0">&copy; CredEasy - 2022. Todos os direitos reservados.</p>
+                    <ul class="list-unstyled d-flex m-0">
+                        <li class="ms-3"><a class="link-light" href="https://www.twitter.com"><i class="fab fa-twitter fa-lg"></i></a></li>
+                        <li class="ms-3"><a class="link-light" href="https://www.instagram.com"><i class="fab fa-instagram fa-lg"></i></a></li>  
+                        <li class="ms-3"><a class="link-light" href="https://www.facebook.com"><i class="fab fa-facebook fa-lg"></i></a></li>
+                    </ul>
+                    <div>
+                        <a href="#" class="links-footer">Termos de Uso</a>
+                        <a href="#" class="links-footer ms-3">Políticas de Privacidade</a>
+                    </div>
+                </div>
+            </div>
         </footer>
+          
         <!--**************************************************************************************-->
         <!--                               Final do rodapé                                        -->
-        <!--**************************************************************************************-->
+        <!--**************************************************************************************--> 
 
 
     
         <script src="./js/barra-de-pesquisa.js"></script>
+        <script src="../assets/js/jquery.min.js"></script>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>

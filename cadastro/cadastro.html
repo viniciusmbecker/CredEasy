@@ -111,10 +111,15 @@
 
                         <!-- Início do campo Senha -->
                         <div class="container-input">
-                            <input type="password" name="senha" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[ !@#$%^&*_=+-]).{6,12}$" autocomplete="off" id="senha" data-tipo="senha" placeholder="Senha" required>
+                            <input type="password" name="senha" minlength="16" autocomplete="off" id="senha" data-tipo="senha" placeholder="Senha" required>
                             <label class="container-input-label" for="senha">Senha</label>
                             <span class="container-input-mensagem-erro"></span>
                         </div>
+                        <!-- <div class="container-input">
+                            <input type="password" name="senha" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[ !@#$%^&*_=+-]).{6,12}$" autocomplete="off" id="senha" data-tipo="senha" placeholder="Senha" required>
+                            <label class="container-input-label" for="senha">Senha</label>
+                            <span class="container-input-mensagem-erro"></span>
+                        </div> -->
                         <!-- Final do campo senha -->
 
                         <!-- Botão para enviar o formulário -->
