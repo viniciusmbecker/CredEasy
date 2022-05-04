@@ -1,0 +1,250 @@
+/* Importa a fonte Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+:root {
+    --brand: #B33030;
+    --nav-link: #A5ACAF;
+    --nav-active-link: #fff;
+    --background: #69BE28;
+    --dark: #002244;
+    --border-radius: 4px;
+    --shadow: 0px 4px 60px rgba(0, 0, 0, 0.14);
+}
+
+body {
+    font-family: "poppins", sans-serif;
+    line-height: 1.7;
+    color: var(--dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: var(--dark);
+}
+
+/****************************************/ 
+/*               Cabeçalho              */
+/****************************************/
+
+.navbar {
+    background-color: #002244;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: var(--nav-link);
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: var(--nav-active-link);
+}
+
+.cor-btn-nav {
+    border: 2px solid #69BE28;
+    color: #A5ACAF;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.cor-btn-nav:hover {
+    border: 2px solid #69BE28;
+    background: #69BE28;
+    color: #002244;
+    font-weight: 700;
+}
+
+#pesquisa img {
+    margin-right: 5px;
+    height: 30px;    
+}
+
+#pesquisa input {
+    font-size: 16px;
+    width: 0px;
+    border-radius: 5px;
+    border: none;
+    background-color: #A5ACAF;
+    transition: 1s;
+    padding: 5px 0px;
+}
+
+#pesquisa input:focus {
+    outline: 1.5px solid #69BE28;
+}
+
+#texto-pesquisa.expandido {
+    width: 250px;
+}
+
+/****************************************/ 
+/*              Seção home 2            */
+/****************************************/
+
+#home2 {
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+#home2 {
+    padding-top: 5rem;
+}
+
+.home2-background {
+    background: var(--background);
+}
+
+#sobre, 
+#produtos,
+#contato {
+    padding-top: 5rem;
+    padding-bottom: 5rem; 
+} 
+
+.section-intro {
+    margin-bottom: 35px;
+    text-align: center; 
+}
+ 
+.section-intro p {
+    max-width: 500px;
+    margin: auto;
+}
+
+/****************************************/ 
+/*           Seção de produtos          */
+/****************************************/
+
+.custom-card {
+    transition: all 0.4s ease;
+    background-color: white;
+    border-radius: var(--border-radius);
+}
+
+.custom-card:hover {
+    box-shadow: var(--shadow);
+    transform: translateY(-5px);
+}
+
+.service {
+    padding: 44px 24px;
+    text-align: center;
+}
+
+.service h5 {
+    margin-top: 28px;
+    margin-bottom: 12px;
+}
+
+.service p {
+    font-size: 14px;
+}
+
+.icon-box {
+    width: 80px;
+    height: 80px;
+    background-color: var(--dark);
+    color: white;
+    border-radius: var(--border-radius);
+    font-size: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.numeros {
+    text-align: center;
+}
+
+/****************************************/ 
+/*            Seção de contato          */
+/****************************************/
+
+.mapa {
+    height: 100%;
+    width: 100%;
+}
+
+
+.cor-btn {
+    background: #002244;
+    /* color: #fff; */
+}
+
+.footer{
+    background: #002244;
+    color:white;
+}
+
+.footer .links ul {
+    list-style-type: none;
+}
+
+.footer .links li a {
+    color: white;
+    transition: color .2s;
+}
+
+.footer .links li a:hover {
+    text-decoration:none;
+    color:#4180CB;
+}  
+    
+    
+
+.about-company{
+    font-size: 25px;
+} 
+
+.about-company a {
+    color:white;
+    transition: color .2s;
+}
+
+.about-company a:hover {
+    color:#4180CB;
+}
+
+.location {
+    font-size: 18px;
+}
+.copyright p {
+    border-top:1px solid rgba(255,255,255,.1);
+}
+
+/****************************************/ 
+/*                 Footer               */
+/****************************************/
+
+.links-nav-footer{
+    color: var(--nav-link);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.links-nav-footer:hover{
+    color: var(--nav-active-link);
+}
+
+.newsletter{
+    color: var(--nav-link);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.links-footer{
+    text-decoration: none;
+    color: var(--nav-link);
+}
+
+.links-footer:hover{
+    color: var(--nav-active-link);
+}
