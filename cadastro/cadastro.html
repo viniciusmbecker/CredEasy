@@ -1,171 +1,165 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/cadastro/cadastro.css">
-        <link rel="stylesheet" href="/home/estilo.css">
-        <title>Formulário de Cadastro</title>
-    </head>
-    <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--**************************************************************************************-->
-        <!--                               Início do cabeçalho                                    -->
-        <!--**************************************************************************************-->
-        <header>
-            <div class="cabecalho">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
 
-                <nav class="cabecalho-menu">
-                    <h1><a href="/home/index.html">CredEasy</a></h1>
-                    <a href="/home/index.html">Home</a>
-                    <a href="#">Sobre</a>
-                    <a href="#">Produtos</a>
-                    <a href="#">Contato</a>
-                </nav>
-                
-                <div class="cabecalho-pesquisa">
-                    <div id="pesquisa">
-                        <img src="../img/icon.svg" alt="" id="lupa">
-                        <input id="texto-pesquisa" type="text" placeholder="Pesquisar...">
-                    </div>
-                    <div><a class="botao-entrar" href="/login/login.html">Entrar</a></div>  
-                    <a class="botao-cadastrar" href="/cadastro/cadastro.html">Cadastrar</a>
+    <link rel="stylesheet" href="./cadastro.css">
+
+    <title>Document</title>
+</head>
+<body class="bg-dark">
+
+    <section>
+        <div class="row g-0">
+            <div class="col-lg-5 d-flex align-items-center justify-content-center">
+                <div class="d-none d-lg-block">
+                    <img src="../assets/img/logo_cred.png" class="img-fluid" width="600" alt="">
                 </div>
             </div>
-            <!-- Final da barra de navegação -->
-        </header>
-        <!--**************************************************************************************-->
-        <!--                                Final do cabeçalho                                    -->
-        <!--**************************************************************************************-->
-
-        <!--**************************************************************************************-->
-        <!--                               Início do container                                    -->
-        <!--**************************************************************************************-->
-        <section class="conteudo-principal">
-
-            <!-- Início do container -->
-            <div class="container-cadastro">   
-
-                <div class="container-titulo">Cadastre sua conta</div>
-
-                <!-- Início do formulário -->
-                <form action="#" id="formulario">
-                    <div class="user-details">
-
-                        <!-- Início do campo Nome -->
-                        <div class="container-input">
-                            <input type="text" minlength="2" maxlength="225" name="nome" autocomplete="off" id="nome" data-tipo="nome" placeholder="Nome Completo" required>
-                            <label class="container-input-label" for="nome">Nome Completo</label>
-                            <span class="container-input-mensagem-erro"></span> 
-                        </div>
-                        <!-- Final do campo do nome -->
-
-                        <!-- Início do campo CPF -->
-                        <div class="container-input">
-                            <input type="text" name="cpf" autocomplete="off" minlength="14" maxlength="14" id="cpf" data-tipo="cpf" placeholder="CPF" required>
-                            <label class="container-input-label" for="cpf">CPF</label>
-                            <span class="container-input-mensagem-erro"></span>
-                        </div>
-                        <!-- Final do campo CPF -->
-
-                        <!-- Início do campo Telefone -->
-                        <div class="container-input">
-                            <input type="tel" name="phone" autocomplete="off" minlength="14" maxlength="14" id="phone" data-tipo="phone" placeholder="Telefone" required>
-                            <label class="container-input-label" for="phone">Telefone</label>
-                            <span class="container-input-mensagem-erro"></span>
-                        </div>
-                        <!-- Final do campo Telefone -->
-
-                        <!-- Início do campo Endereço -->
-                        <div class="container-input">
-                            <input type="text" name="endereco" autocomplete="off" id="endereco" data-tipo="endereco" placeholder="Endereço" required>
-                            <label class="container-input-label" for="endereco">Endereço</label>
-                            <span class="container-input-mensagem-erro"></span>
-                        </div>
-                        <!-- Final do campo Endereço -->
-
-                        <!-- Início do campo Profissão -->
-                        <div class="container-input">
-                            <input type="text" name="profissao" autocomplete="off" id="profissao" data-tipo="profissao" placeholder="Profissão" required>
-                            <label class="container-input-label" for="profissao">Profissão</label>
-                            <span class="container-input-mensagem-erro"></span>
-                        </div>
-                        <!-- Final do campo Profissão -->
-
-                        <!-- Início do campo Renda -->
-                        <div class="container-input">
-                            <input type="text" name="renda" autocomplete="off" id="renda" data-tipo="renda" placeholder="Renda" required>
-                            <label class="container-input-label" for="renda">Renda</label>
-                            <span class="container-input-mensagem-erro"></span>
-                        </div>
-                        <!-- Final do campo Renda -->
-
-                        <!-- Início do campo Email -->
-                        <div class="container-input">
-                            <input type="email" name="email" autocomplete="off" id="email" data-tipo="email" placeholder="Email" required>
-                            <label class="container-input-label" for="email">Email</label>
-                            <span class="container-input-mensagem-erro"></span>
-                        </div>
-                        <!-- Final do campo Email -->
-
-                        <!-- Início do campo Senha -->
-                        <div class="container-input">
-                            <input type="password" name="senha" minlength="16" autocomplete="off" id="senha" data-tipo="senha" placeholder="Senha" required>
-                            <label class="container-input-label" for="senha">Senha</label>
-                            <span class="container-input-mensagem-erro"></span>
-                        </div>
-                        <!-- <div class="container-input">
-                            <input type="password" name="senha" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[ !@#$%^&*_=+-]).{6,12}$" autocomplete="off" id="senha" data-tipo="senha" placeholder="Senha" required>
-                            <label class="container-input-label" for="senha">Senha</label>
-                            <span class="container-input-mensagem-erro"></span>
-                        </div> -->
-                        <!-- Final do campo senha -->
-
-                        <!-- Botão para enviar o formulário -->
-                        <input type="submit" value="Cadastar">
-                    </div>
-
-                    <p id="log"></p>
-
-                </form>
-                <!-- Final do formulário -->
-
-                <!-- Início do botão -->
-                <div class="footer">
-                    <div class="other-button">
-                        <div class="other-button-possui">
-                            <p>
-                                Já possui uma conta? 
-                                <a href="/login/login.html">Entre aqui </a>  
-                            </p>                         
-                        </div>
-                    </div>
+          
+            <div class="col-lg-7 d-flex flex-column align-items-end min-vh-100">
+                <div class="px-lg-5 pt-lg-4 pb-lg-3 p-4 w-100 mb-auto">
                 </div>
-                <!-- Final dos botão -->
-            
-            </div>
-            <!-- Final do container -->
+                <div class="px-lg-5 py-lg-4 p-4 w-100 align-self-center">
+                    <h1 class="font-weight-bold mb-4 text-center">É muito bom ter você aqui!</h1>
+                    <form class="row g-3 mb-5 requires-validation" novalidate>
+                        <div class="col-md-7 mb-3 form-floating">
+                            <input type="text" class="form-control" id="floatingInputName" placeholder="Nome Completo" required>
+                            <label for="floatingInputName" class="form-label">Nome Completo</label>
+                            <div class="invalid-feedback">
+                                Por favor, insira seu nome.
+                            </div>
+                        </div>
+                        <div class="col-md-5 mb-3 form-floating">
+                            <input type="text" class="form-control" id="floatingInputCPF" minlength="14" maxlength="14" placeholder="CPF" required>
+                            <label for="floatingInputCPF" class="form-label">CPF</label>
+                            <div class="invalid-feedback">
+                                Por favor, insira seu CPF.
+                            </div>
+                        </div>
+                        <div class="col-md-5 mb-3 form-floating">
+                            <input type="text" class="form-control" id="floatingInputPhone" placeholder="Telefone Celular" required>
+                            <label for="floatingInputPhone" class="form-label">Telefone Celular</label>
+                            <div class="invalid-feedback">
+                                Por favor, insira seu telefone celular.
+                            </div>
+                        </div>
+                        <div class="col-md-7 mb-3 form-floating">
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+                            <label for="inputEmail" class="form-label">Email</label>  
+                            <div class="invalid-feedback">
+                                Por favor, insira seu email.
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3 form-floating">
+                            <input type="text" class="form-control" id="floatingInputZip" placeholder="CEP" required>
+                            <label for="floatingInputZip" class="form-label">CEP</label>
+                            <div class="invalid-feedback">
+                                Por favor, insira seu CEP.
+                            </div>
+                        </div>
+                        <div class="col-md-7 mb-3 form-floating">
+                            <input type="text" class="form-control" id="floatingInputCity" placeholder="Cidade" required>
+                            <label for="floatingInputCity" class="form-label">Cidade</label>
+                            <div class="invalid-feedback">
+                                Por favor, insira sua cidade.
+                            </div>
+                        </div>
+                        <div class="col-md-2 mb-3 form-floating">
+                            <select id="inputState" class="form-select" required>
+                                <option selected>Escolha</option>
+                                <option>AC</option>
+                                <option>AL</option>
+                                <option>AP</option>
+                                <option>AM</option>
+                                <option>BA</option>
+                                <option>CE</option>
+                                <option>DF</option>
+                                <option>ES</option>
+                                <option>GO</option>
+                                <option>MA</option>
+                                <option>MT</option>
+                                <option>MS</option>
+                                <option>MG</option>
+                                <option>PA</option>
+                                <option>PB</option>
+                                <option>PR</option>
+                                <option>PE</option>
+                                <option>PI</option>
+                                <option>RJ</option>
+                                <option>RN</option>
+                                <option>RS</option>
+                                <option>RO</option>
+                                <option>RR</option>
+                                <option>SC</option>
+                                <option>SP</option>
+                                <option>SE</option>
+                                <option>TO</option>
+                            </select>
+                            <label for="inputState" class="form-label">Estado</label>
+                            <div class="invalid-feedback">
+                                Por favor, insira sua cidade.
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3 form-floating">
+                            <input type="text" class="form-control" id="floatingInputAddress" placeholder="Endereço" required>
+                            <label for="floatingInputAddress" class="form-label">Endereço</label>
+                            <div class="invalid-feedback">
+                                Por favor, insira seu endereço.
+                            </div>
+                        </div>
+                        <div class="col-md-7 mb-3 form-floating">
+                            <input type="text" class="form-control" id="floatingInputOccupation" placeholder="Profissão" required>
+                            <label for="floatingInputOccupation" class="form-label">Profissão</label>
+                            <div class="invalid-feedback">
+                                Por favor, insira sua profissão.
+                            </div>
+                        </div>
+                        <div class="col-md-5 mb-3 form-floating">
+                            <input type="text" class="form-control" id="floatingInputIncome" data-tipo="renda" placeholder="Renda" required>
+                            <label for="floatingInputIncome" class="form-label">Renda</label>
+                            <div class="invalid-feedback">
+                                Por favor, insira sua renda.
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 mb-3 form-floating">
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Senha" required>
+                            <label for="inputPassword" class="form-label">Senha</label>
+                            <div class="invalid-feedback">
+                                Por favor, insira sua senha.
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3 form-floating">
+                            <input type="text" class="form-control" id="inputPassword2" placeholder="Confirme sua senha" required>
+                            <label for="inputPassword2" class="form-label">Confirme sua senha</label>
+                            <div class="invalid-feedback">
+                                Por favor, insira sua senha.
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-custom w-100">Cadastrar</button>
+                        </div>
+                    </form>
+                </div> 
+                <div class="text-center px-lg-5 pt-lg-3 pb-lg-4 p-4 w-100 mt-auto">
+                <!-- <p class="d-inline-block mb-0">Ainda não possui uma conta?</p>
+                <a href="#" class="text-light font-weight-bold text-decoration-none">Crie uma agora</a> -->
+                </div>   
+            </div> 
+        </div>    
+    </section>
 
-        </section>
-        <!--**************************************************************************************-->
-        <!--                                Final do container                                    -->
-        <!--**************************************************************************************-->
 
-
-        <!--**************************************************************************************-->
-        <!--                               Início do rodapé                                       -->
-        <!--**************************************************************************************-->
-        <footer>
-            <p class="copyright">&copy; CredEasy - 2022</p>
-        </footer>
-        <!--**************************************************************************************-->
-        <!--                                Final do rodapé                                       -->
-        <!--**************************************************************************************-->
-
-        <script src="./js/mascaras.js"></script>
-        <script src="./js/app.js" type="module"></script>
-        <script src="../home/js/barra-de-pesquisa.js"></script>
-        <script src="https://github.com/codermarcos/simple-mask-money/releases/download/v3.0.0/simple-mask-money.js"></script>
-    </body>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/mascaras.js"></script>
+    <script src="../assets/js/app.js" type="module"></script>
+    <script src="https://github.com/codermarcos/simple-mask-money/releases/download/v3.0.0/simple-mask-money.js"></script>
+    <script src="../assets/js/form-validation.js"></script>
+</body>
 </html>

@@ -1,265 +1,35 @@
-
-/* ----------------------------------------------------------------------------------------------------- */
-/* ----------------------------------------------- CONTAINER ------------------------------------------- */
-/* ----------------------------------------------------------------------------------------------------- */
-
-/* Trabalhando o conteúdo principal */
-.conteudo-principal {
-    border-top: 2px solid #A5ACAF;
-    background: #69BE28;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    /*width: 100vw;*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+:root {
+    --azul: #002244;
+    --verde: #69be28;
 }
 
-/* Trabalhando a caixa branca (container) que engloba os elementos de login */
-.container-cadastro {
-    max-width: 768px;
-    width: 100%;
-    background: #fff;
-    padding: 2rem;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.8);
-    border-radius: 8px;
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: var(--verde);
 }
 
-/* Trabalhando os elementos de fonte do título do container */
-.container-titulo {
-    color: #002244;
-    font-weight: 600;
-    font-size: 25px;
-    margin-bottom: 2rem;
-    position: relative;
+.bg-dark {
+    background-color: var(--azul) !important;
 }
 
-/* Trabalhando o sublinhado abaixo do título do container*/
-.container-titulo::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 3px;
-    height: 4px;
-    width: 250px;
-    border-radius: 8px;
-    background: linear-gradient(45deg, #69BE28, #002244);
+.form-control, .btn {
+    min-height: 3.125rem;
 }
 
-section form .user-details {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-section form .user-details .container-input {
-    /*border: 1px solid red;*/
-    margin-bottom: 15px;
-    width: 45%;
-}
-
-/* ----------------------------------------------------------------------------------------------------- */
-/* ---------------------------------------------- FORMULÁRIO ------------------------------------------- */
-/* ----------------------------------------------------------------------------------------------------- */
-
-.container-input {
-    /*border: 1px solid red;*/
-    margin-bottom: 18px;
-    position: relative;
-}
-
-.container-input input {
-    width: 100%;
-    padding: 16px 0 0 5px;
-    border: none;
-    border-bottom: 1px solid rgba(0,0,0,0.3);
-    outline: none;
-    color: #000;
-    font-size: 18px;
-}
-
-.container-input input ~ label {
-    position: absolute;
-    top: 16px;
-    left: 5px;
-    transition: .4s;
-    color: rgba(0,0,0,0.3);
-    font-size: 18px;
-}
-
-.container-input input::placeholder {
-    color: transparent;
-}
-
-.container-input input:focus ~ label,
-.container-input input:not(:placeholder-shown) ~ label {
-    transform: translateY(-18px);
-    font-size: 0.8em;
-    color: #002244;
-    font-weight: 600;
-}
-
-.container-input input:focus {
-    border-bottom: 1px solid #69BE28;
-}
-
-
-.container-input.container-input--invalido{
-    margin-bottom: 0.5rem;
-}
-
-.container-input.container-input--invalido input {
-    border: 1px solid red;
-    border-radius: 8px;
-}
-
-.container-input.container-input--invalido label {
-    color: red;
-}
-
-.container-input.container-input--invalido .container-input-mensagem-erro {
-    color: red;
-    display: flex;
-    padding: -5px;
-}
-
-.container-input .container-input-mensagem-erro {
-    display: none;
-}
-
-
-
-
-
-/*
-.container-input label {
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    width: 100%;
-    height: 2px;
-    pointer-events: none;
-    border-bottom: 1px solid rgba(0,0,0,0.2);
-    color: rgba(0,0,0,0.3);
-}
-
-.container-input label::after {
-    content: '';
-    position: absolute;
-    left: 0px;
-    bottom: -1px;
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(45deg, #69BE28, #002244);
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
-}
-*/
-
-
-
-/* .input-field {
-    position: relative;
-}
-
-form .input-field:first-child {
-    margin-bottom: 1.5rem;
-}
-
-.input-field .underline::before {
-    content: '';
-    position: absolute;
-    height: 1px;
-    width: 100%;
-    bottom: -5px;
-    left: 0;
-    background: rgba(0,0,0,0.2);
-}
-
-.input-field .underline::after {
-    content: '';
-    position: absolute;
-    height: 1px;
-    width: 100%;
-    bottom: -5px;
-    left: 0;
-    background: linear-gradient(45deg, #69BE28, #002244);
-    transform: scaleX(0);
-    transition: all 0.3s ease-in-out;
-    transform-origin: left;
-}
-
-.input-field input:focus ~.underline::after {
-    transform: scaleX(1);
-}
-*/
-
-form input[type="submit"] {
-    width: 100%;
-    margin-top: 2rem;
-    padding: 0.4rem;
-    background: linear-gradient(to left, #69BE28, #002244);
-    cursor: pointer;
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 300;
-    border-radius: 4px;
-    /*transition: all 0.3s ease-in-out;*/
-}
-
-section form input[type="submit"]:hover {
-    letter-spacing: 1px;
+.form-floating label {
+    color: var(--azul);
     font-weight: 500;
-    background: linear-gradient(to right, #69BE28, #002244);
 }
 
-/* Classe que trabalha o espaço abaixo do botão de entrar */
-.footer {
-    display: flex;
-    flex-direction: column;
-    margin-top: 1rem;
-    text-align: center;
-}
-
-/* Trabalhando o link dentro do espaço abaixo do botão de entrar */
-.footer .other-button {
-    margin-top: 1rem;
-    padding: 0.4rem;
-    font-size: 1rem;
-}
-
-/* Trabalhando o link */
-.footer .other-button .other-button-possui p {
-    text-decoration: none;
-    color: #002244;
-}
-
-/* Trabalhando o link */
-.footer .other-button .other-button-possui a {
-    text-decoration: none;
-    color: #002244;
-    cursor: pointer; 
-}
-
-/* Trabalhando o link (estado hover) */
-.footer .other-button .other-button-possui a:hover {
-    border: 2px solid #002244;
-    border-radius: 8px;
-    color: #69BE28;
-    background: #002244;
-    text-decoration: none;
-    padding: 3px;
+.btn-custom {
+    background: var(--verde);
+    text-transform: uppercase;
     font-weight: 700;
 }
 
-footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #002244;
-}
-.copyright {
-    /*margin-top: 20px;*/
-    color: #A5ACAF;
-    font-size: 16px;
-    /*text-align: center;*/
+.btn-custom:hover {
+    color: white;
+    transform: translateY(-2px);
 }

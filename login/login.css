@@ -1,202 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 
-/* ------------------------------------------------------------------------------------------------------
-------------------------------------------------- CONTAINER ---------------------------------------------
------------------------------------------------------------------------------------------------------- */
-
-/* Trabalhando o conteúdo principal */
-.conteudo-principal {
-    border-top: 2px solid #A5ACAF;
-    background: #69BE28;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 89.3vh;
-    /*width: 100vw;*/
-}
-/* Trabalhando a caixa branca (container) que engloba os elementos de login */
-.container {
-    /*border: 1px solid blue;*/
-    background: #FFF;
-    max-width: 350px;
-    min-height: 50vh;
-    padding: 2rem; /* padding dos elementos que estão dentro do container */
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.8); /* sombra ao redor do container */
-    border-radius: 8px;
+:root {
+    --azul: #002244;
+    --verde: #69be28;
+    --cinza: #a5acaf;
 }
 
-/* Trabalhando os elementos de fonte do título do container */
-.container h2 {
-    font-weight: 600;
-    margin-bottom: 2rem;
-    position: relative; /* elemento pai é relativo */
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: var(--verde);
 }
 
-/* Trabalhando o sublinhado abaixo do título do container */
-/* Utilizando o pseudo-elemento after após o elemento h2. */ 
-/* Assim, não precisamos criar uma div e estilizá-la */
-.container h2::after {
-    content: ''; /* sintaxe obrigatória do pseudo-elemento (neste caso específico, fica em branco mesmo)*/
-    position: absolute; /* posição absoluta em relação ao pai */
-    height: 4px; /* altura do sublinhado */
-    width: 227px; /* compimento do sublinado */
-    bottom: 3px; /* espaço do sublinhado até o texto */
-    left: 0; /* ponto inicial do sublinhado */
-    border-radius: 8px;
-    background: linear-gradient(45deg, #69BE28,#002244);
-    /*background: linear-gradient(45deg, #097941, #020024);*/
+.bg-dark {
+    background-color: var(--azul) !important;
 }
 
-/* Faz o botão de entrar ocupar a linha inteira */
-form {
-    display: flex;
-    flex-direction: column;
+.form-control, .btn {
+    min-height: 3.125rem;
 }
 
-/**/
-form .input-field {
-    position: relative;
+.form-floating label {
+    color: var(--azul);
+    font-weight: 500;
 }
 
-/* Trabalhando os "campos" do input */
-/* Aplicando uma margin entre a primeira entrada do input e o título*/
-/* Pseudo-classe firstchild: seleciona apenas o primeiro filho */
-form .input-field:first-child {
-    margin-bottom: 1.5rem;
-}
-
-/* Classe underline (responsável pelo sublinhado dos "campos") */
-form .input-field .underline::before {
-    content: '';
-    position: absolute;
-    height: 1px;
-    width: 100%;
-    bottom: -5px;
-    left: 0;
-    background: rgba(0,0,0,0.2);
-}
-
-/* Classe underline (responsável pelo sublinhado dos "campos") */
-form .input-field .underline::after {
-    content: '';
-    position: absolute;
-    height: 1px;
-    width: 100%;
-    bottom: -5px;
-    left: 0;
-    /*background: linear-gradient(45deg, #097941, #020024);*/
-    background: linear-gradient(45deg,#69BE28,#002244);
-    transform: scaleX(0); /* tamanho do item igual a zero, no caso a linha colorida */
-    transition: all 0.3s ease-in-out;
-    transform-origin: left;
-}
-
-/* Pseudo-classe focus: é aplicada quando um elemento recebe foco 
-(é selecionado pelo usuário) */
-/* Seletor ~ : seletor de irmãos. Aqui, seleciona o elemento anterior que
-compartilha o mesmo pai. */
-form .input-field input:focus ~.underline::after {
-    transform: scaleX(1); /* aumenta o tamanho do item, no caso a linha colorida */
-}
-
-/* Trabalhando elementos do input*/
-form .input-field input {
-    outline: none; /* tira o contorno dos "campos" */
-    font-size: 1rem; /* tamanho da fonte dos textos do placeholder */
-    color: rgba(0,0,0,0.7); /* mexe na cor do texto do input */
-    background: #FFF;
-}
-
-/* Pseudo elemento placeholder */
-form .input-field input::placeholder {
-    color: rgba(0,0,0,0.5); /* cor dos textos do placeholder */
-}
-
-/* Trabalhando o botão de entrar */
-form input[type="submit"] {
-    margin-top: 2rem; /* espaço entre o campo de senha e o botão */
-    padding: 0.4rem; /* padding do texto dentro do botão */
-    background: linear-gradient(to left, #69BE28, #002244); /* efeito do gradiente indo para a direita*/
-    cursor: pointer; /* muda o ícone do cursor quando passa pelo botão */
-    color: #FFF; /* cor do texto dentro do botão */
-    font-size: 1rem; /* tamanho da fonte do texto dentro do botão */
-    font-weight: 500; /* peso da fonte do texto dentro do botão */
-    border-radius: 4px; 
-    transition: all 0.3s ease-in-out;
-}
-
-/* Trabalhando o estado hover do botão de entrar */
-form input[type="submit"]:hover {
-    letter-spacing: 1px; /* espaço entre as letras do texto dentro do botão*/
-    background: linear-gradient(to right, #69BE28, #002244); /* efeito do gradiente indo para a direita*/
-}
-
-/* Classe que trabalha o espaço abaixo do botão de entrar */
-.footer {
-    display: flex;
-    flex-direction: column;
-    margin-top: 1rem;
-    text-align: center;
-}
-
-/* Trabalhando os dois links dentro do espaço abaixo do botão de entrar */
-.footer .other-buttons {
-    margin-top: 1rem;
-    padding: 0.4rem;
-    font-size: 1rem;
-    cursor: pointer; 
-}
-
-/* Trabalhando o primeiro link */
-.footer .other-buttons .other-buttons-forgot a {
-    /*border: 1px solid black;*/
-    /*border-radius: 8px;*/
-    text-decoration: none;
-    color: #002244;
-}
-
-/* Trabalhando o primeiro link (estado hover) */
-.footer .other-buttons .other-buttons-forgot a:hover {
-    border: 2px solid #002244;
-    border-radius: 10px;
-    color: #69BE28;
-    background: #002244;
-    text-decoration: none;
-    padding: 3px;
+.btn-custom {
+    background: var(--verde);
+    text-transform: uppercase;
     font-weight: 700;
 }
 
-/* Trabalhando o segundo link */
-.footer .other-buttons .other-buttons-signup a {
-    text-decoration: none;
-    color: #002244;
+.btn-custom:hover {
+    color: white;
+    transform: translateY(-2px);
 }
 
-/* Trabalhando o segundo link (estado hover) */
-.footer .other-buttons .other-buttons-signup a:hover {
-    border: 2px solid #002244;
-    border-radius: 10px;
-    color: #69BE28;
-    background: #002244;
-    text-decoration: none;
-    padding: 3px;
-    font-weight: 700;
-}
-
-/* Espaço entre o primeiro link e o botão de entrar */
-.footer .other-buttons .other-buttons-forgot {
-    margin-bottom: 10px;
-}
-
-footer {
+.btn-custom2 {
+    background: var(--cinza);
+    min-height: 3.125rem;
     display: flex;
-    align-items: center;
     justify-content: center;
-    background: #002244;
+    align-items: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: white;
+    border-radius: 4px;
 }
-.copyright {
-    /*margin-top: 20px;*/
-    color: #A5ACAF;
-    font-size: 16px;
-    /*text-align: center;*/
+
+.btn-custom2:hover {
+    color: var(--azul);
+    transform: translateY(-2px);
+}
+
+.btn-custom3 {
+    background: var(--cinza);
+    min-height: 3.125rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+    border-radius: 4px;
+}
+
+.btn-custom3:hover {
+    color: var(--azul);
+    transform: translateY(-2px);
 }
 
