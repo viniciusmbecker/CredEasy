@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="./cadastro.css">
+    <link rel="stylesheet" href="assets/css/estilo-cadastro.css">
 
     <title>Document</title>
 </head>
@@ -17,7 +17,7 @@
         <div class="row g-0">
             <div class="col-lg-5 d-flex align-items-center justify-content-center">
                 <div class="d-none d-lg-block">
-                    <img src="../assets/img/logo_cred.png" class="img-fluid" width="600" alt="">
+                    <img src="assets/img/logo_cred.png" class="img-fluid" width="600" alt="">
                 </div>
             </div>
           
@@ -28,7 +28,7 @@
                     <h1 class="font-weight-bold mb-4 text-center">É muito bom ter você aqui!</h1>
                     <form class="row g-3 mb-5 requires-validation" novalidate>
                         <div class="col-md-7 mb-3 form-floating">
-                            <input type="text" class="form-control" id="floatingInputName" placeholder="Nome Completo" required>
+                            <input type="text" class="form-control" id="floatingInputName" placeholder="Nome Completo" minlength="2" maxlength="255" required> 
                             <label for="floatingInputName" class="form-label">Nome Completo</label>
                             <div class="invalid-feedback">
                                 Por favor, insira seu nome.
@@ -42,7 +42,7 @@
                             </div>
                         </div>
                         <div class="col-md-5 mb-3 form-floating">
-                            <input type="text" class="form-control" id="floatingInputPhone" placeholder="Telefone Celular" required>
+                            <input type="text" class="form-control" id="floatingInputPhone" placeholder="Telefone Celular" minlength="14" maxlength="14" required>
                             <label for="floatingInputPhone" class="form-label">Telefone Celular</label>
                             <div class="invalid-feedback">
                                 Por favor, insira seu telefone celular.
