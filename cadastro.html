@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="assets/css/estilo-cadastro.css">
 
-    <title>Document</title>
+    <title>Cadastro</title>
 </head>
 <body class="bg-dark">
 
@@ -26,43 +26,36 @@
                 </div>
                 <div class="px-lg-5 py-lg-4 p-4 w-100 align-self-center">
                     <h1 class="font-weight-bold mb-4 text-center">É muito bom ter você aqui!</h1>
-                    <form class="row g-3 mb-5 requires-validation" novalidate>
-                        <div class="col-md-7 mb-3 form-floating">
+                    <form class="row g-3 mb-5 requires-validation" novalidate method="post" action="#">
+                        <div class="col-md-12 mb-3 form-floating">
                             <input type="text" class="form-control" id="floatingInputName" placeholder="Nome Completo" minlength="2" maxlength="255" required> 
                             <label for="floatingInputName" class="form-label">Nome Completo</label>
                             <div class="invalid-feedback">
                                 Por favor, insira seu nome.
                             </div>
                         </div>
-                        <div class="col-md-5 mb-3 form-floating">
+                        <div class="col-md-6 mb-3 form-floating">
                             <input type="text" class="form-control" id="floatingInputCPF" minlength="14" maxlength="14" placeholder="CPF" required>
                             <label for="floatingInputCPF" class="form-label">CPF</label>
                             <div class="invalid-feedback">
                                 Por favor, insira seu CPF.
                             </div>
                         </div>
-                        <div class="col-md-5 mb-3 form-floating">
+                        <div class="col-md-6 mb-3 form-floating">
                             <input type="text" class="form-control" id="floatingInputPhone" placeholder="Telefone Celular" minlength="14" maxlength="14" required>
                             <label for="floatingInputPhone" class="form-label">Telefone Celular</label>
                             <div class="invalid-feedback">
                                 Por favor, insira seu telefone celular.
                             </div>
                         </div>
-                        <div class="col-md-7 mb-3 form-floating">
-                            <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
-                            <label for="inputEmail" class="form-label">Email</label>  
-                            <div class="invalid-feedback">
-                                Por favor, insira seu email.
-                            </div>
-                        </div>
-                        <div class="col-md-3 mb-3 form-floating">
+                        <!-- <div class="col-md-3 mb-3 form-floating">
                             <input type="text" class="form-control" id="floatingInputZip" placeholder="CEP" required>
                             <label for="floatingInputZip" class="form-label">CEP</label>
                             <div class="invalid-feedback">
                                 Por favor, insira seu CEP.
                             </div>
-                        </div>
-                        <div class="col-md-7 mb-3 form-floating">
+                        </div> -->
+                        <!-- <div class="col-md-7 mb-3 form-floating">
                             <input type="text" class="form-control" id="floatingInputCity" placeholder="Cidade" required>
                             <label for="floatingInputCity" class="form-label">Cidade</label>
                             <div class="invalid-feedback">
@@ -104,7 +97,7 @@
                             <div class="invalid-feedback">
                                 Por favor, insira sua cidade.
                             </div>
-                        </div>
+                        </div> -->
                         <div class="col-12 mb-3 form-floating">
                             <input type="text" class="form-control" id="floatingInputAddress" placeholder="Endereço" required>
                             <label for="floatingInputAddress" class="form-label">Endereço</label>
@@ -127,20 +120,28 @@
                             </div>
                         </div>
                         
-                        <div class="col-md-6 mb-3 form-floating">
+                        <div class="col-md-7 mb-3 form-floating">
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+                            <label for="inputEmail" class="form-label">Email</label>  
+                            <div class="invalid-feedback">
+                                Por favor, insira seu email.
+                            </div>
+                        </div>
+
+                        <div class="col-md-5 mb-3 form-floating">
                             <input type="password" class="form-control" id="inputPassword" placeholder="Senha" required>
                             <label for="inputPassword" class="form-label">Senha</label>
                             <div class="invalid-feedback">
                                 Por favor, insira sua senha.
                             </div>
                         </div>
-                        <div class="col-md-6 mb-3 form-floating">
+                        <!-- <div class="col-md-6 mb-3 form-floating">
                             <input type="text" class="form-control" id="inputPassword2" placeholder="Confirme sua senha" required>
                             <label for="inputPassword2" class="form-label">Confirme sua senha</label>
                             <div class="invalid-feedback">
                                 Por favor, insira sua senha.
                             </div>
-                        </div>
+                        </div> -->
                         <div class="col-12">
                             <button type="submit" class="btn btn-custom w-100">Cadastrar</button>
                         </div>
@@ -155,11 +156,12 @@
     </section>
 
 
-    <script src="../assets/js/jquery.min.js"></script>
-    <script src="../assets/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/mascaras.js"></script>
-    <script src="../assets/js/app.js" type="module"></script>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/mascaras.js"></script>
+    <script src="./assets/js/app.js" type="module"></script>
+    <script src="./assets/js/app2.js" type="module"></script>
     <script src="https://github.com/codermarcos/simple-mask-money/releases/download/v3.0.0/simple-mask-money.js"></script>
-    <script src="../assets/js/form-validation.js"></script>
+    <script src="./assets/js/form-validation.js"></script>
 </body>
 </html>
