@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+:root {
+    --azul: #002244;
+    --verde: #69be28;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: var(--verde);
+}
+
+.bg-dark {
+    background-color: var(--azul) !important;
+}
+
+.form-control, .btn {
+    min-height: 3.125rem;
+}
+
+.form-floating label {
+    color: var(--azul);
+    font-weight: 500;
+}
+
+.btn-custom {
+    background: var(--verde);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.btn-custom:hover {
+    color: white;
+    transform: translateY(-2px);
+}

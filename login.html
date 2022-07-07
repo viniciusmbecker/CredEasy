@@ -4,62 +4,70 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/login.css">
-        <title>Página de Login</title>
-    </head>
-    <body>
-         
-        <!-- Início do principal-->
-        <main>
-            <!-- Início do "cabeçalho" com logo -->
-            <div class="title">
-                <h1>
-                   <a href="index.html">CredEasy</a>
-                </h1>
-            </div>
-            <!-- Final do "cabeçalho" com logo -->
 
-            <!-- Início do container -->
-            <div class="container">
-                <h2>Entre na sua conta</h2>
 
-            <!-- Início do formulário -->
-            <form action="#">
-                <!-- Início do campo Email -->
-                <div class="input-field">
-                    <input type="email" name="email" id="email" placeholder="Email" required>
-                    <div class="underline"></div>
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/estilo-login.css">
+
+        <title>Login</title>
+    </head> 
+    <body class="bg-dark">
+        
+        <section>
+            <div class="row g-0">
+                <div class="col-lg-7 d-flex align-items-center justify-content-center">
+                    <div class="d-none d-lg-block">
+                        <img src="assets/img/logo_cred.png" class="img-fluid" width="600" alt="">
+                    </div>
                 </div>
-                <!-- Final do campo Email -->
+                <div class="col-lg-5 d-flex flex-column align-items-end min-vh-100">
+                    <div class="px-lg-5 pt-lg-4 pb-lg-3 p-4 w-100 mb-auto">
+                    </div>
+                    <div class="px-lg-5 py-lg-4 p-4 w-100 align-self-center">
+                        <h1 class="font-weight-bold mb-4">Bem vindo de volta!</h1>
+                        <form class="mb-5 requires-validation" novalidate>
+                            <div class="form-floating mb-4">
+                                <input type="email" class="form-control border-0" id="floatingInput" placeholder="Email" autocomplete="off" required>
+                                <label for="floatingInput">Email</label>
+                                <div class="invalid-feedback">
+                                    Por favor, insira seu email.
+                                </div>
+                                <div class="valid-feedback"></div>
+                            </div>
+                            <div class="form-floating mb-4">
+                                <input type="password" class="form-control border-0" id="floatingPassword" placeholder="Senha" required>
+                                <label for="floatingPassword">Senha</label>
+                                <div class="invalid-feedback">
+                                    Por favor, insira sua senha.
+                                </div>
+                            </div>
+                            <div class="form-check mb-4">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck">
+                                <label for="exampleCheck" class="form-check-label">Lembrar-me</label>
+                            </div>
+                            <button type="submit" class="btn btn-custom w-100">Entrar</button>
+                        </form>
 
-                <!-- Início do campo Senha -->
-                <div class="input-field">
-                    <input type="password" name="senha" id="senha" placeholder="Senha" required>
-                    <div class="underline"></div>
-                </div>
-                <!-- Final do campo senha -->
+                        <!-- <p class="font-weight-bold text-center text-muted">Ou entre com sua conta</p> -->
+                        <div class="d-flex justify-content-around mt-5">
+                            <a class="btn btn-custom2 flex-grow-1 me-2" href="recuperacao-senha/recuperacao-senha.html" role="button">Esqueci minha senha</a>
 
-                <!-- Botão para enviar o formulário -->
-                <input type="submit" value="Entrar">
+                            <a class="btn btn-custom2 flex-grow-1 ms-2" href="cadastro.html" role="button">Ainda não sou cliente</a>
+                        </div>
+                    </div>
 
-            </form>
-            <!-- Final do formulário -->
-
-            <!-- Início dos botoẽs -->
-            <div class="footer">
-            <div class="other-buttons">
-                <div class="other-buttons-forgot">
-                    <a href="recuperacao-senha.html">Esqueci minha senha > </a>
-                </div>
-                <div class="other-buttons-signup">
-                    <a href="cadastro.html">Ainda não sou cliente > </a>
+                    <div class="text-center px-lg-5 pt-lg-3 pb-lg-4 p-4 w-100 mt-auto">
+                        <div class="d-inline-block mb-0">
+                            <a class="btn btn-custom3" href="index.html" role="button">Voltar para a home</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            </div>
-            <!-- Final dos botoẽs -->
-            </div>
-            <!-- Final do container -->
-        </main>
-        <!-- Final do principal -->
+        </section>
+
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/form-validation.js"></script>
     </body>
 </html>
