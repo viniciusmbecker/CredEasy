@@ -1,38 +1,55 @@
 <?php
 
-    require __DIR__ . '/../vendor/autoload.php';
+use Illuminate\Contracts\Http\Kernel;
+use Illuminate\Http\Request;
 
-    use Vini\Credeasy\Controller\InterfaceControladorRequisicao;
+define('LARAVEL_START', microtime(true));
 
-    $caminho = $_SERVER['PATH_INFO'];
-    $rotas = require __DIR__ . '/../config/routes.php';
+/*
+|--------------------------------------------------------------------------
+| Check If The Application Is Under Maintenance
+|--------------------------------------------------------------------------
+|
+| If the application is in maintenance / demo mode via the "down" command
+| we will load this file so that any pre-rendered content can be shown
+| instead of starting the framework, which could cause an exception.
+|
+*/
 
-    if (!array_key_exists($caminho, $rotas)) {
-        http_response_code(404);
-        exit();
-    }
+if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php')) {
+    require $maintenance;
+}
 
-    session_start();
+/*
+|--------------------------------------------------------------------------
+| Register The Auto Loader
+|--------------------------------------------------------------------------
+|
+| Composer provides a convenient, automatically generated class loader for
+| this application. We just need to utilize it! We'll simply require it
+| into the script here so we don't need to manually load our classes.
+|
+*/
 
-    // $rotasLivres = [
-    //     '/home',
-    //     '/cadastra-cliente',
-    //     '/login',
-    //     '/realiza-login',
-    //     '/cadastro-realizado',
-    //     '/cadastro-concluido'
-    // ];
+require __DIR__.'/../vendor/autoload.php';
 
-    // $ehRota = in_array($caminho, $rotasLivres);
+/*
+|--------------------------------------------------------------------------
+| Run The Application
+|--------------------------------------------------------------------------
+|
+| Once we have the application, we can handle the incoming request using
+| the application's HTTP kernel. Then, we will send the response back
+| to this client's browser, allowing them to enjoy our application.
+|
+*/
 
-    // if (!isset($_SESSION['logado']) && !$ehRota) {
-    //     header('Location: /login');
-    //     exit();
-    // }
+$app = require_once __DIR__.'/../bootstrap/app.php';
 
-    $classeControladora = $rotas[$caminho];
-    /** @var InterfaceControladorRequisicao $controlador */
-    $controlador = new $classeControladora();
-    $controlador->processaRequisicao();
+$kernel = $app->make(Kernel::class);
 
-?>
+$response = $kernel->handle(
+    $request = Request::capture()
+)->send();
+
+$kernel->terminate($request, $response);
