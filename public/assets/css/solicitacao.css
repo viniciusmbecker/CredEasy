@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@600;700;800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap'); */
+
+:root {
+    --brand: #B33030;
+    --nav-link: #A5ACAF;
+    --nav-active-link: #fff;
+    --verde: #69BE28;
+    --azul: #002244;
+    --border-radius: 4px;
+    --shadow: 0px 4px 60px rgba(0, 0, 0, 0.14);
+}
+
+body {
+    font-family: "poppins", sans-serif;
+    /* font-family: "Lobster", cursive; */
+    line-height: 1.7;
+    background: var(--azul);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Domine", sans-serif;
+    font-weight: 700;
+    color: var(--verde);
+}
+
+.form-control, .btn {
+    min-height: 3.125rem;
+}
+
+.form-floating label {
+    color: var(--azul);
+    font-weight: 500;
+}
+
+.btn-custom {
+    background: var(--verde);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.btn-custom:hover {
+    color: white;
+    transform: translateY(-2px);
+}
