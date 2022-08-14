@@ -17,10 +17,19 @@ class ClienteController extends Controller
             ->with('clientes', Cliente::all());
     }
 
+    public function listaClientes()
+    {
+        return Cliente::where('tipo_usuario', 'CLIENTE')->get();
+    }
+
+
     public function dashboard()
     {
+        /**
+         * @var Cliente $cliente
+         */
         $cliente = Auth::user();
-        $novoEmprestimos = $cliente->emprestimos;
+        $novoEmprestimos = $cliente->emprestimos()->orderBy('data_solicitacao', 'desc')->get();
         return view('cliente.tela-cliente')
             ->with('novoEmprestimos', $novoEmprestimos)
             ->with('cliente', $cliente);

@@ -157,45 +157,53 @@
 		
 					<!-------------- INÍCIO TERCEIRO CARD ---------------->
 					<div class="col-lg-4 col-md-6">
+						<a href="{{ route('relatorio') }}">
 						<div class="d-flex align-items-center dashboard-card">
 							<div class="icon-box">
 								<span class="material-icons-sharp">description</span>
 							</div>
 							<h4>Relatórios Diversos</h4>
 						</div>
+						</a>
 					</div>		
 					<!-------------- FINAL TERCEIRO CARD ---------------->
 
                     <!-------------- INÍCIO QUARTO CARD ---------------->
 					<div class="col-lg-4 col-md-6">
+						<a href="{{ route('emprestimo.lista-cliente') }}">
 						<div class="d-flex align-items-center dashboard-card">
 							<div class="icon-box">
 								<span class="material-icons-sharp">bar_chart</span>
 							</div>
 							<h4>Meus empréstimos</h4>
 						</div>
+						</a>
 					</div>	
 					<!-------------- FINAL QUARTO CARD ---------------->
 		
 					<!-------------- INÍCIO QUINTO CARD ---------------->
 					<div class="col-lg-4 col-md-6">
+						<a href="{{ route('emprestimo.aprovado') }}">
 						<div class="d-flex align-items-center dashboard-card">
 							<div class="icon-box">
 								<span class="material-icons-sharp">payments</span>
 							</div>
 							<h4>Pagar parcelas</h4>
 						</div>
+						</a>
 					</div>		
 					<!-------------- FINAL QUINTO CARD ---------------->
 		
 					<!-------------- INÍCIO SEXTO  CARD ---------------->
 					<div class="col-lg-4 col-md-6">
+						<a href="{{ route('emprestimo.solicitacao') }}">
 						<div class="d-flex align-items-center dashboard-card">
 							<div class="icon-box">
 								<span class="material-icons-sharp">currency_exchange</span>
 							</div>
 							<h4>Novo empréstimo</h4>
 						</div>
+						</a>
 					</div>		
 					<!-------------- FINAL SEXTO  CARD ---------------->
 				</div>
@@ -238,7 +246,21 @@
 		    <!------main-content-end-----------> 
         </div>    
 
-            
-        <script src="../pagina-usuario/index.js"></script>
+        <script src="{{ asset('js/jquery.min.js') }}"></script>
+   		<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+  
+  		<script type="text/javascript">
+       		$(document).ready(function(){
+	      		$(".xp-menubar").on('click',function(){
+		    		$("#sidebar").toggleClass('active');
+					$("#content").toggleClass('active');
+		  		});
+		  
+		  		$('.xp-menubar,.body-overlay').on('click',function(){
+		     		$("#sidebar,.body-overlay").toggleClass('show-nav');
+		  		});
+		  
+	   		});
+  		</script>
     </body>
 </html>

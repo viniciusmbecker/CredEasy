@@ -12,6 +12,12 @@ use Illuminate\Support\Facades\Auth;
 
 class EmprestimoController extends Controller
 {
+    public function listarEmprestimosCliente(Emprestimo $emprestimo)
+    {
+        return view('emprestimo.lista-emprestimo-cliente')
+            ->with('emprestimos', Emprestimo::all());
+    }
+
     public function listarEmprestimosParaGestor()
     {
         return view('emprestimo.index')
@@ -97,7 +103,13 @@ class EmprestimoController extends Controller
 
         $emprestimo->save();
 
-        return to_route('emprestimo.lista');
+        return to_route('analisa.emprestimo');
+    }
+
+    public function emprestimoAprovado()
+    {
+        return view('emprestimo.emprestimos-aprovados')
+            ->with('emprestimos', Emprestimo::where('status_emprestimo', 'APROVADO')->get());
     }
     
 }

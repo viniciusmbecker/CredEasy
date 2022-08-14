@@ -5,14 +5,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        @vite('resources/css/app.scss')
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
         
         <!-- Estilo Customizado -->
-        
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/estilo-home.css') }}">
 
         <link rel="icon" type="image/x-icon" href="{{ asset('img/logo.png') }}">
-        
-        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 
         <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
 
@@ -22,7 +21,7 @@
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp">
 
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/estilo-home.css') }}">
+        
         
         <title>CredEasy</title>
     </head>

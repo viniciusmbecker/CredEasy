@@ -29,5 +29,10 @@ class GestorController
             ->with('emprestimos', Emprestimo::all());
     }
 
+    public function relatorio()
+    {
+        return view('gestor.relatorios');
+    }
+
 
 }

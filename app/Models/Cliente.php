@@ -6,11 +6,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Contracts\Auth;
 use Illuminate\Contracts\Auth\Authenticatable;
+use Laravel\Sanctum\HasApiTokens;
 
 class Cliente extends Model implements Authenticatable
 {
-    use HasFactory;
 
+    use HasApiTokens;
+        
     protected $primaryKey = 'cpf';
     protected $keyType = 'string';
 

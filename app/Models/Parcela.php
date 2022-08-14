@@ -9,7 +9,7 @@ class Parcela extends Model
 {
     use HasFactory;
 
-    protected $dates = ['data_solicitacao', 'data_quitacao'];
+    protected $dates = ['data_pagamento', 'data_vencimento'];
 
     public $timestamps = false;
     
