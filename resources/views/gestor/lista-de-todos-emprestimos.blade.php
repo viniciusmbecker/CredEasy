@@ -111,14 +111,14 @@
 		     
 		    <div class="main-content">
 				<div class="row">
-					<h1 class="mb-4"> Minha Gestão</h1>
+					<h1 class="mb-2"> Minha Gestão</h1>
 				</div>
 				<hr>
 				<div class="row mt-4">	
-				    <div class="col-md-12 mt-5">
+				    <div class="col-md-12 mt-3">
 					   	<div class="table-wrapper">
 							<div class="table-responsive">
-								<h2 class="table-title">Todos os Empréstimos</a></h2>
+								<h2 class="table-title">Lista de Todos os Empréstimos</a></h2>
 								<table class="table">
 									<thead>
 										<tr>

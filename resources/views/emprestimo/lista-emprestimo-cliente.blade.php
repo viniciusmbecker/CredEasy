@@ -117,11 +117,11 @@
 		     
 		    <div class="main-content">
 				<div class="row">
-					<h1 class="mb-4"> Histórico de Empréstimos </h1>
+					<h1 class="mb-2"> Histórico de Empréstimos </h1>
 				</div>
 				<hr>
 				<div class="row mt-4">	
-				    <div class="col-md-12 mt-5">
+				    <div class="col-md-12 mt-2">
 					   	<div class="table-wrapper">
 							<div class="table-responsive">
 								<h2 class="table-title">Meus Empréstimos</h2>
@@ -147,7 +147,7 @@
                                             	<td>{{ $emprestimo->status_emprestimo}}</td>
                                             	<td><a class="btn btn-primary btn-sm" href={{ route('emprestimo.detalhes', $emprestimo->id) }}>Detalhes</a></td> 
                                         	</tr>
-                                    	@endforeach
+										@endforeach
 									</tbody>
 								</table>
 							</div>   

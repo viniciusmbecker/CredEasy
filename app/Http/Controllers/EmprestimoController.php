@@ -12,16 +12,14 @@ use Illuminate\Support\Facades\Auth;
 
 class EmprestimoController extends Controller
 {
-    public function listarEmprestimosCliente(Emprestimo $emprestimo)
+    public function listarEmprestimosCliente(Cliente $cliente)
     {
+        $cliente = Auth::user();
+        $emprestimos = $cliente->emprestimos;
+        // dd($cliente);
         return view('emprestimo.lista-emprestimo-cliente')
-            ->with('emprestimos', Emprestimo::all());
-    }
-
-    public function listarEmprestimosParaGestor()
-    {
-        return view('emprestimo.index')
-            ->with('emprestimos', Emprestimo::where('status_emprestimo', 'SOLICITADO')->get());
+            ->with('emprestimos', $emprestimos)
+            ->with('cliente', $cliente);
     }
 
     public function detalhesEmprestimo(Emprestimo $emprestimo)
@@ -106,10 +104,17 @@ class EmprestimoController extends Controller
         return to_route('analisa.emprestimo');
     }
 
-    public function emprestimoAprovado()
+    public function emprestimoAprovado(Cliente $cliente)
     {
+        /**
+         * @var Cliente $cliente
+         */
+        $cliente = Auth::user();
+        $emprestimos = $cliente->emprestimos()->get();
+        // dd($emprestimos);
+        
         return view('emprestimo.emprestimos-aprovados')
-            ->with('emprestimos', Emprestimo::where('status_emprestimo', 'APROVADO')->get());
+            ->with('emprestimos', $emprestimos);
     }
     
 }

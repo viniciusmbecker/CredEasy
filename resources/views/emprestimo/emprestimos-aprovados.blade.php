@@ -143,6 +143,7 @@
                             </thead>
                             <tbody>
                                     @foreach ($emprestimos as $emprestimo)
+                                    @if ( $emprestimo->status_emprestimo === 'APROVADO') 
                                     <tr>
                                         <td>{{ $emprestimo->id}}</td>
                                         <td>R$ {{ number_format($emprestimo->valor_emprestimo, 2, ',', '.')}}</td>
@@ -152,6 +153,7 @@
                                             <a class="btn btn-primary btn-sm" href={{ route('emprestimo.comparcela', $emprestimo->id) }}>Selecionar</a>
                                         </td>
                                     </tr>
+                                    @endif
                                     @endforeach
                             </tbody>
                         </table>

@@ -117,11 +117,11 @@
 		     
 		    <div class="main-content">
 				<div class="row">
-					<h1 class="mb-4"> Meu Dashboard</h1>
+					<h1 class="mb-2"> Meu Dashboard</h1>
 				</div>
 				<hr>
 				<div class="row">
-					<h4 class="fw-bold mt-5">
+					<h4 class="fw-bold mt-4">
 						Olá, {{$cliente->nome}}!
 					</h4>
 				</div>
@@ -174,8 +174,8 @@
 					<!-------------- FINAL TERCEIRO CARD ---------------->
 				</div>
 				</div>
-				<div class="row mt-4">	
-				    <div class="col-md-12 mt-5">
+				<div class="row mt-3">	
+				    <div class="col-md-12 mt-3">
 					   	<div class="table-wrapper">
 							<div class="table-responsive">
 								<h2 class="table-title">Empréstimos Recentes <a href="{{ route('emprestimo.lista-cliente') }}" class="fs-5 fw-lighter text-light p-2">Ver Todos</a></h2>
@@ -192,7 +192,7 @@
 									</thead>
 							
 									<tbody>
-										@foreach ($novoEmprestimos as $novoEmprestimo)
+										@foreach ($novoEmprestimos->slice(0,3) as $novoEmprestimo)
                                         	<tr>
                                             	<td>{{ $novoEmprestimo->id }}</td>
                                             	<td>R$ {{ number_format($novoEmprestimo->valor_emprestimo, 2, ',', '.') }}</td>

@@ -111,21 +111,14 @@
 		     
 		    <div class="main-content">
 				<div class="row">
-					<h1 class="mb-4"> Minha Gestão</h1>
+					<h1 class="mb-2"> Minha Gestão</h1>
 				</div>
 				<hr>
 				<div class="row">
-					<h4 class="fw-bold mt-5">
+					<h4 class="fw-bold mt-3">
 						Olá, {{$cliente->nome}}!
 					</h4>
 				</div>
-				<!-- <div class="row">
-					<p class="mt-4">
-						From your My Dashboard you have the ability to view a snapshot of your 
-						recent account activity and update your account information.
-						Select a link bellow to view or edit information. 
-					</p>
-				</div> -->
 				<div class="container">
 			    <div class="row gy-4 d-flex justify-content-around bg-light mt-4 mb-4">
 					<!-------------- INÍCIO PRIMEIRO CARD ---------------->
@@ -209,10 +202,10 @@
 				</div>
 				</div>
 				<div class="row mt-4">	
-				    <div class="col-md-12 mt-5">
+				    <div class="col-md-12 mt-3">
 					   	<div class="table-wrapper">
 							<div class="table-responsive">
-								<h2 class="table-title">Empréstimos Recentes <a href="#" class="fs-5 fw-lighter text-light p-2">Ver Todos</a></h2>
+								<h2 class="table-title">Empréstimos Recentes <a href="{{ route('emprestimo.lista-cliente') }}" class="fs-5 fw-lighter text-light p-2">Ver Todos</a></h2>
 								<table class="table">
 									<thead>
 									   	<tr>

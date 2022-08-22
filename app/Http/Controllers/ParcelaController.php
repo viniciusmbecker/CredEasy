@@ -35,7 +35,6 @@ class ParcelaController extends Controller
     public function pagarParcela(Parcela $parcela, Request $request)
     {
         $emprestimo = Emprestimo::find($parcela->emprestimo_id);
-        // dd($emprestimo);
 
         $parcelaSeguinte = $emprestimo->parcelas()->where('status', 'ABERTA')->first()->numero_parcela;
 
@@ -46,14 +45,15 @@ class ParcelaController extends Controller
 
         $parcela->status = 'PAGA';
         $parcela->data_pagamento = now();
+        $parcela->valor_pago = $parcela->valor_parcela;
         $parcela->save();
 
-        if ($parcela->numero === $emprestimo->qtd_parcelas) {
+        if ($parcela->numero_parcela === $emprestimo->parcelas->count()) {
             $emprestimo->status_emprestimo = 'QUITADO';
             $emprestimo->data_quitacao = now();
             $emprestimo->save();
         }
 
-        return to_route('emprestimo.parcelas', $parcela->emprestimo_id);
+        return to_route('emprestimo.comparcela', $parcela->emprestimo_id);
     }
 }

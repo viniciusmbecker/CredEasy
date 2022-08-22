@@ -17,6 +17,12 @@ class GestorController
             ->with('cliente', $cliente);
     }
     
+    public function listarEmprestimosParaGestor()
+    {
+        return view('emprestimo.index')
+            ->with('emprestimos', Emprestimo::where('status_emprestimo', 'SOLICITADO')->get());
+    }
+
     public function listarEmprestimosParaAnalisar()
     {
         return view('gestor.lista-de-emprestimos-para-analisar')
