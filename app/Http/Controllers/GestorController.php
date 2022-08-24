@@ -4,10 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Models\Cliente;
 use App\Models\Emprestimo;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class GestorController
 {
+    public function index()
+    {
+        return view('cliente.index')
+            ->with('clientes', Cliente::where('tipo_usuario', 'CLIENTE')->get());
+    }
+
     public function mostraTelaInicial()
     {
         $cliente = Auth::user();
@@ -39,6 +46,5 @@ class GestorController
     {
         return view('gestor.relatorios');
     }
-
-
+    
 }

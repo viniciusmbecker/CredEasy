@@ -266,6 +266,21 @@ a, a:hover, a:focus {
 	margin:5px 0  0;
 	font-size:17px;
 }
+
+.table-title-var {
+	background: var(--azul);
+	color: #fff;
+	position: sticky;
+	top: 0;
+	width: 100%;
+	left: 0;
+	padding: 10px 30px;
+}
+	   
+.table-title-var h2 {
+	margin:5px 0  0;
+	font-size:17px;
+}
 			
 /*--table design end----*/ 
 		   
@@ -308,4 +323,52 @@ a, a:hover, a:focus {
 		transition: all 150ms linear;
 		background-color: rgba(0,0,0,0.5);
 	}
+}
+
+.botao-newsletter {
+    background: var(--verde);
+    color: white;
+    padding: 5px 6px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: var(--border-radius);
+    transition: all 0.4s ease;
+}
+
+.botao-newsletter:hover {
+    color: var(--azul);
+    transform: translateY(-2px);
+}
+
+.botao-analise-red {
+    background: red;
+    color: white;
+    padding: 8px 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: var(--border-radius);
+    transition: all 0.4s ease;
+}
+
+.botao-newsletter:hover {
+    color: var(--azul);
+    transform: translateY(-2px);
+}
+
+.botao-analise-green {
+    background: var(--verde);
+    color: white;
+    padding: 8px 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: var(--border-radius);
+    transition: all 0.4s ease;
+}
+
+.botao-newsletter:hover {
+    color: var(--azul);
+    transform: translateY(-2px);
 }

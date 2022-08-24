@@ -117,7 +117,7 @@
 		     
 		    <div class="main-content">
 				<div class="row">
-					<h1 class="mb-4"> Realize o pagamento da parcela</h1>
+					<h1 class="mb-2"> Realize o pagamento da parcela</h1>
 				</div>
 				<hr>
 
@@ -171,9 +171,15 @@
                                             <form action="{{ route('parcela.pagar', $parcela->id) }}" method="post">
                                                 @csrf
                                                 @method('PATCH')
-                                                <button type="submit" class="btn-primary btn-sm">
-                                                    Pagar
-                                                </button>
+                                                @if ( $parcela->status != 'PAGA')
+                                                    <button type="submit" class="btn btn-primary btn-sm">
+                                                        Pagar
+                                                    </button>
+                                                @else
+                                                    <button type="submit" class="btn btn-primary btn-sm" disabled>
+                                                        Pagar
+                                                    </button>
+                                                @endif
                                             </form>
                                             
                                         </td>

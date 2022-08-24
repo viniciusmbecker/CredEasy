@@ -7,6 +7,7 @@
 
     @vite('resources/css/app.scss')
 
+    <link rel="icon" type="image/x-icon" href="{{ asset('img/logo.png') }}">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 
     <link rel="stylesheet" href="{{ asset('css/estilo-cadastro.css') }}">

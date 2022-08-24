@@ -11,12 +11,6 @@ use function GuzzleHttp\Promise\all;
 
 class ClienteController extends Controller
 {
-    public function index()
-    {
-        return view('cliente.index')
-            ->with('clientes', Cliente::all());
-    }
-
     public function listaClientes()
     {
         return Cliente::where('tipo_usuario', 'CLIENTE')->get();

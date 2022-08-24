@@ -38,16 +38,18 @@ Route::post('/cliente', [ClienteController::class, 'cadastrarCliente'])
 
 
 Route::middleware('autenticador')->group(function () {
-    Route::get('/cliente/listar', [ClienteController::class, 'index']);
-
     Route::get('/cliente/dashboard', [ClienteController::class, 'dashboard'])
     ->name('dashboard');
+    Route::get('/gestor/listar', [GestorController::class, 'index'])
+    ->name('lista');
     Route::get('/gestor/tela-inicial', [GestorController::class, 'mostraTelaInicial'])
     ->name('tela.inicial');
     Route::get('gestor/analisa-emprestimo', [GestorController::class, 'listarEmprestimosParaAnalisar'])
     ->name('analisa.emprestimo');
     Route::get('/gestor/todos-emprestimos', [GestorController::class, 'listarTodosOsEmprestimos'])
     ->name('todos.emprestimos');
+    Route::get('/gestor/todos-emprestimos-filtro', [GestorController::class, 'filtro'])
+    ->name('todos.emprestimosfiltro');
     Route::get('/gestor/relatorios', [GestorController::class, 'relatorio'])
     ->name('relatorio');
     

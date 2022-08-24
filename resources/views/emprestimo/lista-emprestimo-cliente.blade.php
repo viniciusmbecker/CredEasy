@@ -145,7 +145,22 @@
                                             	<td>{{ $emprestimo->data_solicitacao->format('d/m/Y')}}</td>
                                             	<td>{{ $emprestimo->parcelasPagas() }}/{{ $emprestimo->parcelas()->count()}}</td> 
                                             	<td>{{ $emprestimo->status_emprestimo}}</td>
-                                            	<td><a class="btn btn-primary btn-sm" href={{ route('emprestimo.detalhes', $emprestimo->id) }}>Detalhes</a></td> 
+												@if ( $emprestimo->status_emprestimo === 'REPROVADO' )
+													<td>
+														<a class="btn btn-primary btn-sm disabled" 
+															href={{ route('emprestimo.detalhes', $emprestimo->id) }}>
+															Detalhes
+														</a>
+													</td>
+												@else
+													<td>
+														<a class="btn btn-primary btn-sm" 
+															href={{ route('emprestimo.detalhes', $emprestimo->id) }}>
+															Detalhes
+														</a>
+													</td>	
+												@endif
+                                            	 
                                         	</tr>
 										@endforeach
 									</tbody>
