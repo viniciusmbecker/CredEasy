@@ -5,10 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\EmprestimoController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\GestorController;
-use App\Http\Controllers\NovoEmprestimoController;
 use App\Http\Controllers\ParcelaController;
-use App\Http\Middleware\Autenticador;
-use App\Models\Emprestimo;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,18 +37,6 @@ Route::post('/cliente', [ClienteController::class, 'cadastrarCliente'])
 Route::middleware('autenticador')->group(function () {
     Route::get('/cliente/dashboard', [ClienteController::class, 'dashboard'])
     ->name('dashboard');
-    Route::get('/gestor/listar', [GestorController::class, 'index'])
-    ->name('lista');
-    Route::get('/gestor/tela-inicial', [GestorController::class, 'mostraTelaInicial'])
-    ->name('tela.inicial');
-    Route::get('gestor/analisa-emprestimo', [GestorController::class, 'listarEmprestimosParaAnalisar'])
-    ->name('analisa.emprestimo');
-    Route::get('/gestor/todos-emprestimos', [GestorController::class, 'listarTodosOsEmprestimos'])
-    ->name('todos.emprestimos');
-    Route::get('/gestor/todos-emprestimos-filtro', [GestorController::class, 'filtro'])
-    ->name('todos.emprestimosfiltro');
-    Route::get('/gestor/relatorios', [GestorController::class, 'relatorio'])
-    ->name('relatorio');
     
     Route::get('/emprestimo/parcelas/{emprestimo}', [ParcelaController::class, 'listarParcela'])
     ->name('emprestimo.parcelas');
@@ -65,12 +50,6 @@ Route::middleware('autenticador')->group(function () {
     Route::get('/emprestimo-aprovado', [EmprestimoController::class, 'emprestimoAprovado'])
     ->name('emprestimo.aprovado');
 
-    Route::post('/emprestimo/status/{emprestimo}', [EmprestimoController::class, 'atualizaStatus'])
-    ->name('emprestimo.status');
-
-    Route::get('/emprestimo/analisar/{emprestimo}', [EmprestimoController::class, 'analisarEmprestimo'])
-    ->name('analisar.emprestimo');
-
     Route::get('/emprestimo/formulario-de-solicitacao', [EmprestimoController::class, 'exibeFormularioDeSolicitacao'])
     ->name('emprestimo.solicitacao');
 
@@ -83,4 +62,24 @@ Route::middleware('autenticador')->group(function () {
     Route::get('/emprestimo-lista', [EmprestimoController::class, 'listarEmprestimosCliente'])
     ->name('emprestimo.lista-cliente');
     
+});
+
+Route::middleware('autenticador.gestor')->group(function () {
+    Route::get('/gestor/listar', [GestorController::class, 'index'])
+    ->name('lista');
+    Route::get('/gestor/tela-inicial', [GestorController::class, 'mostraTelaInicial'])
+    ->name('tela.inicial');
+    Route::get('gestor/analisa-emprestimo', [GestorController::class, 'listarEmprestimosParaAnalisar'])
+    ->name('analisa.emprestimo');
+    Route::get('/gestor/todos-emprestimos', [GestorController::class, 'listarTodosOsEmprestimos'])
+    ->name('todos.emprestimos');
+    Route::get('/gestor/todos-emprestimos-filtro', [GestorController::class, 'filtrar'])
+    ->name('todos.emprestimosfiltro');
+    Route::get('/gestor/relatorios', [GestorController::class, 'relatorio'])
+    ->name('relatorio');
+    Route::post('/emprestimo/status/{emprestimo}', [EmprestimoController::class, 'atualizaStatus'])
+    ->name('emprestimo.status');
+    Route::get('/emprestimo/analisar/{emprestimo}', [EmprestimoController::class, 'analisarEmprestimo'])
+    ->name('analisar.emprestimo');
+
 });

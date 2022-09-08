@@ -14,8 +14,13 @@ class LoginController extends Controller
 
     public function autenticar(Request $request)
     {
+        $request->validate([
+            'cpf' => ['required', 'min:14', 'max:14'],
+            'senha' => 'required'
+        ]);
+
         if (!Auth::attempt(['cpf' => $request->cpf, 'password' => $request->senha])) {
-            return redirect()->back()->withErrors('Usuário ou senha inválidos');
+            return redirect()->back()->withErrors('Usuário ou senha inválidos')->withInput();
         }
         
         return to_route('home');

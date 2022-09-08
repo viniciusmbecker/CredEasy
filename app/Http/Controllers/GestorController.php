@@ -46,5 +46,18 @@ class GestorController
     {
         return view('gestor.relatorios');
     }
+
+    public function filtrar()
+    {
+        $search = request('search');
+
+        if($search) {
+            $emprestimos = Emprestimo::where([
+                ['status_emprestimo', 'like', '%'.$search.'%']
+            ])->get();
+        }
+
+        return view('gestor.lista-de-todos-emprestimos',['emprestimos' => $emprestimos , 'search' => $search]);
+    }
     
 }

@@ -7,17 +7,21 @@
 		<hr>
 		<form action="{{ route('todos.emprestimosfiltro') }}" method="get">
 			<div class="input-group d-flex justify-content-end gap-2">
-				<input type="text" name="cliente_cpf" class="form-control" value="{{ $cliente_cpf ?? ''}}" 
-				aria-describedby="button-addon2">
-				<button class="btn botao-newsletter" type="submit" id="button-addon2">Pesquisar</button>
+				<input type="text" name="search" class="form-control" placeholder="Filtrar empréstimos por status" autocomplete="off">
+				<button class="btn botao-newsletter" type="submit" id="button-addon2">Filtrar</button>
 			</div>
 		</form>
+		@isset($search)
+			<div class="mt-3">
+				<h3>Você buscou por: {{$search}}</h3>
+			</div>
+		@endisset
 		<div class="row mt-4">	
 			<div class="col-md-12 mt-3">
 				<div class="table-wrapper">
 					<div class="table-responsive">
 						<h2 class="table-title">
-							Lista de Todos os Empréstimos
+							Lista de Empréstimos
 						</h2>
 						<table class="table">
 							<thead>
